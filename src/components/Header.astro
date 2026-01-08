@@ -1,0 +1,33 @@
+---
+const navItems = [
+  { label: 'Projects', href: '/projects' },
+
+  { label: 'Connect', href: '/connect' },
+  { label: 'About', href: '/biography' },
+];
+---
+
+<header class="w-full py-8 px-6 md:px-12 flex flex-col md:flex-row justify-between items-center bg-white sticky top-0 z-50">
+  <div class="mb-4 md:mb-0">
+    <a href="/" class="text-2xl font-bold tracking-widest uppercase hover:opacity-100">
+      Mark Power
+    </a>
+  </div>
+
+  <nav>
+    <ul class="flex flex-wrap justify-center gap-6 text-sm font-medium tracking-wide text-gray-600">
+      {navItems.map((item) => (
+        <li>
+          <a 
+            href={item.href} 
+            class="hover:text-black transition-colors uppercase text-xs"
+            target={item.external ? '_blank' : undefined}
+            rel={item.external ? 'noopener noreferrer' : undefined}
+          >
+            {item.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+</header>

@@ -1,6 +1,7 @@
 ---
 title: "Project 3"
 year: "2024"
+category: "documentary"
 order: 3
 description: "This is an example project description for Project 3."
 coverImage: "/images/projects/project-3.jpg"

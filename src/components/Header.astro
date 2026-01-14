@@ -1,7 +1,17 @@
 ---
 const navItems = [
-  { label: 'Projects', href: '/projects' },
-
+  { 
+    label: 'Projects', 
+    href: '/projects',
+    subItems: [
+        { label: 'Photography', href: '/projects/category/photography' },
+        { label: 'Video Art', href: '/projects/category/video-art' },
+        { label: 'Documentary', href: '/projects/category/documentary' },
+        { label: 'Printmaking', href: '/projects/category/printmaking' },
+        { label: 'Others', href: '/projects/category/others' },
+    ]
+  },
+  { label: 'Writing', href: '/writing' },
   { label: 'Connect', href: '/connect' },
   { label: 'About', href: '/biography' },
 ];
@@ -17,15 +27,30 @@ const navItems = [
   <nav>
     <ul class="flex flex-wrap justify-center gap-6 text-sm font-medium tracking-wide text-gray-600">
       {navItems.map((item) => (
-        <li>
+        <li class="relative group">
           <a 
             href={item.href} 
-            class="hover:text-black transition-colors uppercase text-xs"
+            class="hover:text-black transition-colors uppercase text-xs block py-2"
             target={item.external ? '_blank' : undefined}
             rel={item.external ? 'noopener noreferrer' : undefined}
           >
             {item.label}
           </a>
+          
+          {item.subItems && (
+            <div class="absolute left-1/2 -translate-x-1/2 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 min-w-[160px]">
+                <div class="bg-white border border-gray-100 shadow-sm py-2 flex flex-col items-center">
+                    {item.subItems.map((sub) => (
+                        <a 
+                            href={sub.href}
+                            class="block px-4 py-2 text-xs uppercase text-gray-500 hover:text-black hover:bg-gray-50 transition-colors w-full text-center whitespace-nowrap"
+                        >
+                            {sub.label}
+                        </a>
+                    ))}
+                </div>
+            </div>
+          )}
         </li>
       ))}
     </ul>

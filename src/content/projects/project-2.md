@@ -1,6 +1,7 @@
 ---
 title: "Project 2"
 year: "2024"
+category: "video-art"
 order: 2
 description: "This is an example project description for Project 2."
 coverImage: "/images/projects/project-2.jpg"

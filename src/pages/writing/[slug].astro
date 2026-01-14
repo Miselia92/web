@@ -1,0 +1,48 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const writing = await getCollection('writing');
+  return writing.map((essay) => ({
+    params: { slug: essay.slug },
+    props: { essay },
+  }));
+}
+
+const { essay } = Astro.props;
+const { Content } = await essay.render();
+
+const formatDate = (date: Date) => {
+  return new Intl.DateTimeFormat('en-GB', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  }).format(date);
+};
+---
+
+<Layout title={`${essay.data.title} | Mark Power`}>
+  <article class="px-6 md:px-12 py-12 max-w-3xl mx-auto">
+    <header class="mb-12">
+      <h1 class="text-3xl md:text-5xl font-light mb-6 uppercase tracking-wide">{essay.data.title}</h1>
+      <div class="text-xs uppercase tracking-widest text-gray-400">
+        <time datetime={essay.data.date.toISOString()}>{formatDate(essay.data.date)}</time>
+      </div>
+    </header>
+    
+    {essay.data.coverImage && (
+      <div class="mb-12">
+        <img 
+          src={essay.data.coverImage} 
+          alt={essay.data.title}
+          class="w-full h-auto"
+        />
+      </div>
+    )}
+    
+    <div class="prose prose-lg prose-neutral max-w-none text-gray-800">
+      <Content />
+    </div>
+  </article>
+</Layout>

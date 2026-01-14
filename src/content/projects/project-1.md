@@ -1,6 +1,7 @@
 ---
 title: "Project 1"
 year: "2024"
+category: "photography"
 order: 1
 description: "This is an example project description for Project 1."
 coverImage: "/images/projects/project-1.jpg"

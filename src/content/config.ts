@@ -8,24 +8,26 @@ const projects = defineCollection({
         coverImage: z.string().optional(),
         images: z.array(z.string()).optional(),
         description: z.string().optional(),
+        category: z.enum(['photography', 'video-art', 'documentary', 'printmaking', 'others']).default('others'),
         // For ordering if needed, or we can use default date
         order: z.number().default(99),
     }),
 });
 
-const essays = defineCollection({
+const writing = defineCollection({
     type: 'content',
     schema: z.object({
         title: z.string(),
         date: z.date(),
         author: z.string().default('Mark Power'),
         description: z.string().optional(),
+        coverImage: z.string().optional(),
     }),
 });
 
 export const collections = {
     projects,
-    essays,
+    writing,
     pages: defineCollection({
         type: 'content',
         schema: z.object({

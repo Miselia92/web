@@ -1,6 +1,7 @@
 ---
 title: "Project 4"
 year: "2024"
+category: "printmaking"
 order: 4
 description: "This is an example project description for Project 4."
 coverImage: "/images/projects/project-4.jpg"

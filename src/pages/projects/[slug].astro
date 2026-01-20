@@ -1,41 +1,38 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import { getCollection } from 'astro:content';
+import Layout from '@/layouts/Layout.astro';
+import { getProjects } from '@/lib/content-tina';
+import { RichText } from '@/components/tina/RichText';
 
 export async function getStaticPaths() {
-  const projects = await getCollection('projects');
+  const projects = await getProjects();
   return projects.map((project) => ({
-    params: { slug: project.slug },
+    params: { slug: project._sys.filename },
     props: { project },
   }));
 }
 
 const { project } = Astro.props;
-const { Content } = await project.render();
+const { title, year, body, images } = project;
 ---
 
-<Layout title={`${project.data.title} | Mark Power`}>
+<Layout title={`${title} | Mark Power`}>
   <div class="px-6 md:px-12 py-12 max-w-7xl mx-auto">
     
     <div class="mb-16 md:w-2/3">
-      <h1 class="text-3xl md:text-5xl font-light mb-6 uppercase tracking-wide">{project.data.title}</h1>
-      <div class="text-sm md:text-base leading-relaxed text-gray-700 space-y-4 max-w-prose">
-        <p class="text-gray-500 mb-6">{project.data.year}</p>
-        <Content />
+      <h1 class="text-3xl md:text-5xl font-light mb-6 uppercase tracking-wide">{title}</h1>
+      <div class="text-sm md:text-base leading-relaxed text-muted-foreground space-y-4 max-w-prose">
+        <p class="text-muted-foreground mb-6">{year}</p>
+        <RichText content={body} client:visible />
       </div>
     </div>
 
-    <!-- Images / Gallery would go here. 
-         For now assuming images are part of the markdown content or handled via a custom schema in the future. 
-         If data.images exists: -->
-    
-    {project.data.images && project.data.images.length > 0 && (
+    {images && images.length > 0 && (
       <div class="space-y-12 md:space-y-24">
-        {project.data.images.map((image, index) => (
+        {images.map((image, index) => (
           <div class="w-full">
             <img 
               src={image} 
-              alt={`${project.data.title} - Image ${index + 1}`}
+              alt={`${title} - Image ${index + 1}`}
               class="w-full h-auto"
             />
           </div>

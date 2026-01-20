@@ -1,14 +1,14 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import { getCollection } from 'astro:content';
+import Layout from '@/layouts/Layout.astro';
+import { getProjects } from '@/lib/content-tina';
 
-const projects = await getCollection('projects');
+const projects = await getProjects();
 // Sort by year desc or order
 projects.sort((a, b) => {
-  const orderA = a.data.order ?? 99;
-  const orderB = b.data.order ?? 99;
+  const orderA = a.order ?? 99;
+  const orderB = b.order ?? 99;
   if (orderA !== orderB) return orderA - orderB;
-  return (b.data.year || '0').localeCompare(a.data.year || '0');
+  return (b.year || '0').localeCompare(a.year || '0');
 });
 ---
 
@@ -18,25 +18,25 @@ projects.sort((a, b) => {
     
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 gap-y-12">
       {projects.map((project) => (
-        <a href={`/projects/${project.slug}`} class="group block">
-          <div class="aspect-[4/3] bg-gray-100 overflow-hidden mb-4 relative">
-             {project.data.coverImage ? (
+        <a href={`/projects/${project._sys.filename}`} class="group block">
+          <div class="aspect-[4/3] bg-muted overflow-hidden mb-4 relative">
+             {project.coverImage ? (
                 <img 
-                  src={project.data.coverImage} 
-                  alt={project.data.title} 
+                  src={project.coverImage} 
+                  alt={project.title} 
                   class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
              ) : (
-                <div class="w-full h-full flex items-center justify-center text-gray-300 uppercase tracking-widest text-xs">
+                <div class="w-full h-full flex items-center justify-center text-muted-foreground uppercase tracking-widest text-xs">
                   No Cover
                 </div>
              )}
           </div>
-          <h2 class="text-lg font-normal group-hover:text-gray-600 transition-colors uppercase tracking-wide">
-            {project.data.title}
+          <h2 class="text-lg font-normal group-hover:text-muted-foreground transition-colors uppercase tracking-wide">
+            {project.title}
           </h2>
-          {project.data.year && (
-            <p class="text-xs text-gray-400 mt-1">{project.data.year}</p>
+          {project.year && (
+            <p class="text-xs text-muted-foreground mt-1">{project.year}</p>
           )}
         </a>
       ))}

@@ -1,0 +1,38 @@
+fragment PagesParts on Pages {
+  __typename
+  title
+  heroImages
+  portraitImage
+  sections {
+    __typename
+    title
+    name
+    address
+    email
+    link
+    linkText
+  }
+  body
+}
+
+fragment ProjectsParts on Projects {
+  __typename
+  title
+  year
+  coverImage
+  images
+  description
+  category
+  order
+  body
+}
+
+fragment WritingParts on Writing {
+  __typename
+  title
+  date
+  author
+  description
+  coverImage
+  body
+}

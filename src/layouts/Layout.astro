@@ -1,7 +1,8 @@
 ---
-import Header from '../components/Header.astro';
+import { Header } from '@/components/layout/Header';
+import { Footer } from '@/components/layout/Footer';
 
-import '../styles/global.css';
+import '@/styles/global.css';
 
 interface Props {
 	title: string;
@@ -24,11 +25,11 @@ const { title, description = "The photography of Mark Power." } = Astro.props;
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 	</head>
-	<body class="flex flex-col min-h-screen text-primary bg-white">
-		<Header />
+	<body class="flex flex-col min-h-screen text-foreground bg-background antialiased font-sans">
+		<Header client:load />
 		<main class="flex-grow">
 			<slot />
 		</main>
-
+		<Footer />
 	</body>
 </html>

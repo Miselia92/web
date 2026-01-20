@@ -1,12 +1,14 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import { getCollection } from 'astro:content';
+import Layout from '@/layouts/Layout.astro';
+import { getWritings } from '@/lib/content-tina';
 
-const writing = await getCollection('writing');
+const writing = await getWritings();
 // Sort by date desc
-writing.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+writing.sort((a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf());
 
-const formatDate = (date: Date) => {
+const formatDate = (dateString: string) => {
+  if (!dateString) return '';
+  const date = new Date(dateString);
   return new Intl.DateTimeFormat('en-GB', {
     day: 'numeric',
     month: 'long',
@@ -22,31 +24,31 @@ const formatDate = (date: Date) => {
     <div class="flex flex-col gap-16">
       {writing.map((essay) => (
         <article class="group">
-          <a href={`/writing/${essay.slug}`} class="flex flex-col md:flex-row gap-8 items-center group">
-            {essay.data.coverImage && (
-              <div class="w-full md:w-[30%] shrink-0 overflow-hidden aspect-[16/9] md:aspect-[4/3]">
+          <a href={`/writing/${essay._sys.filename}`} class="flex flex-col md:flex-row gap-8 items-center group">
+            {essay.coverImage && (
+              <div class="w-full md:w-[30%] shrink-0 overflow-hidden aspect-[16/9] md:aspect-[4/3] bg-muted relative">
                 <img 
-                  src={essay.data.coverImage} 
-                  alt={essay.data.title}
+                  src={essay.coverImage} 
+                  alt={essay.title}
                   class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               </div>
             )}
             <div class="flex-1">
-                <h2 class="text-2xl font-normal group-hover:text-gray-600 transition-colors mb-2">
-                {essay.data.title}
+                <h2 class="text-2xl font-normal group-hover:text-muted-foreground transition-colors mb-2">
+                {essay.title}
                 </h2>
-                <div class="text-xs uppercase tracking-widest text-gray-400 mb-4">
-                    <time datetime={essay.data.date.toISOString()}>
-                        {formatDate(essay.data.date)}
+                <div class="text-xs uppercase tracking-widest text-muted-foreground mb-4">
+                    <time datetime={essay.date}>
+                        {formatDate(essay.date)}
                     </time>
                 </div>
-                {essay.data.description && (
-                    <p class="text-gray-600 leading-relaxed font-light mb-4">
-                        {essay.data.description}
+                {essay.description && (
+                    <p class="text-muted-foreground leading-relaxed font-light mb-4">
+                        {essay.description}
                     </p>
                 )}
-                <span class="text-xs border-b border-black pb-0.5 hover:border-gray-400 transition-colors">
+                <span class="text-xs border-b border-foreground pb-0.5 hover:border-muted-foreground transition-colors">
                     Read Essay
                 </span>
             </div>

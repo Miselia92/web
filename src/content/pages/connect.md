@@ -7,10 +7,11 @@ sections:
     email: chenyuhong0821@gmail.com
     link: ''
     linkText: ''
-  - title: Print Sales
-    name: Magnum Photos
-    address: 'London, New York, Paris'
-    link: 'https://www.ffxiv.com.tw/web/'
-    linkText: tina Photos
+  - title: Studio
+    name: Second Street Studio
+    address: 'Taipei,Taiwan'
+    email: 2ndsecondstreetstudio@gmail.com
+    link: ''
+    linkText: ''
 ---
 

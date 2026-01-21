@@ -1,6 +1,6 @@
 ---
 title: Home
-brandName: Tina
+brandName: TinaAA
 heroImages:
   - /images/20221012_193038.jpg
   - /images/3.jpg

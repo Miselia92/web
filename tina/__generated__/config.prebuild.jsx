@@ -111,12 +111,51 @@ var writing = {
   ]
 };
 
-// tina/collections/pages.ts
-var pages = {
-  name: "pages",
-  label: "Pages",
+// tina/collections/home.ts
+var home = {
+  name: "home",
+  label: "Home",
   path: "src/content/pages",
   format: "md",
+  ui: {
+    allowedActions: {
+      create: false,
+      delete: false
+    }
+  },
+  match: {
+    include: "home"
+  },
+  fields: [
+    {
+      type: "string",
+      name: "brandName",
+      label: "Brand Name"
+    },
+    {
+      type: "image",
+      name: "heroImages",
+      label: "Hero Images",
+      list: true
+    }
+  ]
+};
+
+// tina/collections/about.ts
+var about = {
+  name: "about",
+  label: "About",
+  path: "src/content/pages",
+  format: "md",
+  ui: {
+    allowedActions: {
+      create: false,
+      delete: false
+    }
+  },
+  match: {
+    include: "about"
+  },
   fields: [
     {
       type: "string",
@@ -127,14 +166,40 @@ var pages = {
     },
     {
       type: "image",
-      name: "heroImages",
-      label: "Hero Images",
-      list: true
-    },
-    {
-      type: "image",
       name: "portraitImage",
       label: "Portrait Image"
+    },
+    {
+      type: "rich-text",
+      name: "body",
+      label: "Body",
+      isBody: true
+    }
+  ]
+};
+
+// tina/collections/connect.ts
+var connect = {
+  name: "connect",
+  label: "Connect",
+  path: "src/content/pages",
+  format: "md",
+  ui: {
+    allowedActions: {
+      create: false,
+      delete: false
+    }
+  },
+  match: {
+    include: "connect"
+  },
+  fields: [
+    {
+      type: "string",
+      name: "title",
+      label: "Title",
+      isTitle: true,
+      required: true
     },
     {
       type: "object",
@@ -173,12 +238,6 @@ var pages = {
           label: "Link Text"
         }
       ]
-    },
-    {
-      type: "rich-text",
-      name: "body",
-      label: "Body",
-      isBody: true
     }
   ]
 };
@@ -200,7 +259,7 @@ var config_default = defineConfig({
     }
   },
   schema: {
-    collections: [pages, projects, writing]
+    collections: [home, about, connect, projects, writing]
   }
 });
 export {

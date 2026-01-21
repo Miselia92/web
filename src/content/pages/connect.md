@@ -1,13 +1,16 @@
 ---
-title: "Connect"
+title: Connect
 sections:
-  - title: "Studio"
-    name: "Mark Power Studio"
-    address: "Brighton, UK"
-    email: "studio@markpower.co.uk"
-  - title: "Print Sales"
-    name: "Magnum Photos"
-    address: "London, New York, Paris"
-    link: "https://magnumphotos.com"
-    linkText: "Visit Magnum Photos"
+  - title: Studio
+    name: Tina Studio
+    address: 'Brighton, UK'
+    email: tina@tina.gmail.com
+    link: ''
+    linkText: ''
+  - title: Print Sales
+    name: Magnum Photos
+    address: 'London, New York, Paris'
+    link: 'https://www.ffxiv.com.tw/web/'
+    linkText: tina Photos
 ---
+

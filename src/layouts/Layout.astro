@@ -1,4 +1,5 @@
 ---
+import { getEntry } from 'astro:content';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 
@@ -10,6 +11,9 @@ interface Props {
 }
 
 const { title, description = "The photography of Mark Power." } = Astro.props;
+
+const home = await getEntry('pages', 'home');
+const brandName = home?.data?.brandName;
 ---
 
 <!doctype html>
@@ -26,7 +30,7 @@ const { title, description = "The photography of Mark Power." } = Astro.props;
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 	</head>
 	<body class="flex flex-col min-h-screen text-foreground bg-background antialiased font-sans">
-		<Header client:load />
+		<Header client:load brandName={brandName} />
 		<main class="flex-grow">
 			<slot />
 		</main>

@@ -1,10 +1,19 @@
 import type { Collection } from "tinacms";
 
-export const pages: Collection = {
-    name: "pages",
-    label: "Pages",
+export const connect: Collection = {
+    name: "connect",
+    label: "Connect",
     path: "src/content/pages",
     format: "md",
+    ui: {
+        allowedActions: {
+            create: false,
+            delete: false,
+        },
+    },
+    match: {
+        include: "connect",
+    },
     fields: [
         {
             type: "string",
@@ -12,17 +21,6 @@ export const pages: Collection = {
             label: "Title",
             isTitle: true,
             required: true,
-        },
-        {
-            type: "image",
-            name: "heroImages",
-            label: "Hero Images",
-            list: true,
-        },
-        {
-            type: "image",
-            name: "portraitImage",
-            label: "Portrait Image",
         },
         {
             type: "object",
@@ -61,12 +59,6 @@ export const pages: Collection = {
                     label: "Link Text",
                 },
             ],
-        },
-        {
-            type: "rich-text",
-            name: "body",
-            label: "Body",
-            isBody: true,
         },
     ],
 };

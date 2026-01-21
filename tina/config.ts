@@ -1,7 +1,9 @@
 import { defineConfig } from "tinacms";
 import { projects } from "./collections/projects";
 import { writing } from "./collections/writing";
-import { pages } from "./collections/pages";
+import { home } from "./collections/home";
+import { about } from "./collections/about";
+import { connect } from "./collections/connect";
 
 const branch =
     process.env.GITHUB_BRANCH ||
@@ -24,6 +26,6 @@ export default defineConfig({
         },
     },
     schema: {
-        collections: [pages, projects, writing],
+        collections: [home, about, connect, projects, writing],
     },
 });

@@ -1,9 +1,9 @@
 ---
 import Layout from '@/layouts/Layout.astro';
-import { getPage } from '@/lib/content-tina';
+import { getAbout } from '@/lib/content-tina';
 import { RichText } from '@/components/tina/RichText';
 
-const page = await getPage('about.md');
+const page = await getAbout();
 const { portraitImage, title, body } = page;
 ---
 

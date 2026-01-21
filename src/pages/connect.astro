@@ -1,8 +1,8 @@
 ---
 import Layout from '@/layouts/Layout.astro';
-import { getPage } from '@/lib/content-tina';
+import { getConnect } from '@/lib/content-tina';
 
-const page = await getPage('connect.md');
+const page = await getConnect();
 const { title, sections } = page;
 ---
 

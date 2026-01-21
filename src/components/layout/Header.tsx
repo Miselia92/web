@@ -19,12 +19,16 @@ const navItems = [
     { label: "About", href: "/biography" }, // Mapped from About -> /biography as per original
 ];
 
-export function Header() {
+interface HeaderProps {
+    brandName?: string;
+}
+
+export function Header({ brandName = "Mark Power" }: HeaderProps) {
     return (
         <header className="w-full py-8 px-6 md:px-12 flex flex-col md:flex-row justify-between items-center bg-background border-b border-border/40 sticky top-0 z-50 backdrop-blur-sm bg-background/95 supports-[backdrop-filter]:bg-background/60">
             <div className="mb-4 md:mb-0">
                 <a href="/" className="text-2xl font-bold tracking-widest uppercase hover:opacity-80 transition-opacity">
-                    Mark Power
+                    {brandName}
                 </a>
             </div>
 

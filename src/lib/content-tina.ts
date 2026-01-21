@@ -20,7 +20,17 @@ export async function getWriting(relativePath: string) {
     return response.data.writing;
 }
 
-export async function getPage(relativePath: string) {
-    const response = await client.queries.pages({ relativePath });
-    return response.data.pages;
+export async function getHome() {
+    const response = await client.queries.home({ relativePath: "home.md" });
+    return response.data.home;
+}
+
+export async function getAbout() {
+    const response = await client.queries.about({ relativePath: "about.md" });
+    return response.data.about;
+}
+
+export async function getConnect() {
+    const response = await client.queries.connect({ relativePath: "connect.md" });
+    return response.data.connect;
 }

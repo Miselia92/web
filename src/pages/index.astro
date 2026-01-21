@@ -1,10 +1,10 @@
 ---
 import Layout from '@/layouts/Layout.astro';
-import { getPage } from '@/lib/content-tina';
+import { getHome } from '@/lib/content-tina';
 import { RichText } from '@/components/tina/RichText';
 
-const page = await getPage('home.md');
-const { heroImages, body } = page;
+const page = await getHome();
+const { heroImages } = page;
 const images = heroImages || [];
 ---
 
@@ -48,11 +48,7 @@ const images = heroImages || [];
 				}
 			</script>
 			
-            {body && (
-            <div class="mt-8 prose max-w-none dark:prose-invert">
-                <RichText content={body} client:visible />
-            </div>
-            )}
+
 		</div>
 	</div>
 </Layout>

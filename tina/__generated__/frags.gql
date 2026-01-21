@@ -1,8 +1,19 @@
-fragment PagesParts on Pages {
+fragment HomeParts on Home {
+  __typename
+  brandName
+  heroImages
+}
+
+fragment AboutParts on About {
   __typename
   title
-  heroImages
   portraitImage
+  body
+}
+
+fragment ConnectParts on Connect {
+  __typename
+  title
   sections {
     __typename
     title
@@ -12,7 +23,6 @@ fragment PagesParts on Pages {
     link
     linkText
   }
-  body
 }
 
 fragment ProjectsParts on Projects {

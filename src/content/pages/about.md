@@ -1,12 +1,8 @@
 ---
-title: "Biography"
-portraitImage: "/images/projects/detail-1.jpg"
+title: Biography
+portraitImage: /images/Bio/IMG_6617.JPG
 ---
 
-Mark Power (b. 1959, UK) studied life drawing and painting at Brighton Polytechnic but turned to photography soon after graduating. 
-He worked as a freelance photographer for ten years before beginning teaching in 1992. 
+Chen Yu Hong (b.1999,Taiwan)
 
-He has published multiple books and his work is held in major collections worldwide. 
-He joined Magnum Photos as a Nominee in 2002, becoming a full Member in 2007.
-
-(This is placeholder text for the biography page.)
+Graduated from the Department of Radio and Television at National Chengchi University, currently pursuing a master’s degree at the Graduate Institute for Transdisciplinary Arts at Taipei National University of the Arts. An image-based artist whose practice spans still photography, printmaking, documentaries, experimental films, animation, and narrative films. Their work primarily explores themes of time, space, memory, and postcolonialism, approaching moving images as a means of social engagement, communication, and emotional expression.

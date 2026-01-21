@@ -2,7 +2,7 @@
 title: Home
 brandName: Tina
 heroImages:
-  - /images/20230112_071933.jpg
+  - /images/20221012_193038.jpg
   - /images/3.jpg
   - /images/example-1.jpg
   - /images/example-3.jpg

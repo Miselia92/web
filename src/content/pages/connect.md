@@ -1,10 +1,10 @@
 ---
 title: Connect
 sections:
-  - title: Studio
-    name: Tina Studio
-    address: 'Brighton, UK'
-    email: tina@tina.gmail.com
+  - title: contact
+    name: Chen Yu Hong
+    address: 'Taipei,Taiwan'
+    email: chenyuhong0821@gmail.com
     link: ''
     linkText: ''
   - title: Print Sales

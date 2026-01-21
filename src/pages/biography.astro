@@ -28,7 +28,7 @@ const { portraitImage, title, body } = page;
     
     <div class="md:w-2/3">
       <h1 class="text-3xl font-light mb-8 uppercase tracking-wide">{title}</h1>
-      <div class="prose prose-stone prose-lg max-w-none text-muted-foreground font-light dark:prose-invert">
+      <div class="prose prose-stone prose-lg max-w-none text-muted-foreground font-light">
         <RichText content={body} client:visible />
       </div>
     </div>

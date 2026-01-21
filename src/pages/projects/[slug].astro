@@ -2,6 +2,7 @@
 import Layout from '@/layouts/Layout.astro';
 import { getProjects } from '@/lib/content-tina';
 import { RichText } from '@/components/tina/RichText';
+import OptimizedImage from '@/components/OptimizedImage.astro';
 
 export async function getStaticPaths() {
   const projects = await getProjects();
@@ -30,7 +31,7 @@ const { title, year, body, images } = project;
       <div class="space-y-12 md:space-y-24">
         {images.map((image, index) => (
           <div class="w-full">
-            <img 
+            <OptimizedImage 
               src={image} 
               alt={`${title} - Image ${index + 1}`}
               class="w-full h-auto"

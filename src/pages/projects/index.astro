@@ -1,6 +1,7 @@
 ---
 import Layout from '@/layouts/Layout.astro';
 import { getProjects } from '@/lib/content-tina';
+import OptimizedImage from '@/components/OptimizedImage.astro';
 
 const projects = await getProjects();
 // Sort by year desc or order
@@ -21,7 +22,7 @@ projects.sort((a, b) => {
         <a href={`/projects/${project._sys.filename}`} class="group block">
           <div class="aspect-[4/3] bg-muted overflow-hidden mb-4 relative">
              {project.coverImage ? (
-                <img 
+                <OptimizedImage 
                   src={project.coverImage} 
                   alt={project.title} 
                   class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"

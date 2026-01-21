@@ -1,0 +1,102 @@
+---
+/**
+ * OptimizedImage - Uses Astro's Image component for full optimization
+ * 
+ * For public/ images (TinaCMS), we use import.meta.glob to dynamically 
+ * import them, enabling Astro's image processing (WebP conversion, resizing).
+ * 
+ * Features:
+ * - Automatic WebP/AVIF conversion at build time
+ * - Responsive srcset generation
+ * - Lazy loading for off-screen images
+ * - Async decoding to not block the main thread
+ * - Automatic width/height to prevent CLS
+ */
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+interface Props {
+  src: string | undefined | null;
+  alt: string;
+  class?: string;
+  width?: number;
+  height?: number;
+  loading?: 'lazy' | 'eager';
+  fetchpriority?: 'high' | 'low' | 'auto';
+  sizes?: string;
+  quality?: number;
+  format?: 'webp' | 'avif' | 'png' | 'jpg' | 'jpeg';
+}
+
+const { 
+  src, 
+  alt, 
+  class: className = '', 
+  width,
+  height,
+  loading = 'lazy',
+  fetchpriority = 'auto',
+  sizes,
+  quality = 80,
+  format = 'webp',
+} = Astro.props;
+
+// Import all images from public/images using glob
+// This allows Astro to process them at build time
+const publicImages = import.meta.glob<{ default: ImageMetadata }>(
+  '/public/images/**/*.{jpeg,jpg,png,gif,webp,avif}',
+  { eager: true }
+);
+
+// Function to resolve public path to imported image
+function resolveImage(imagePath: string): ImageMetadata | null {
+  if (!imagePath) return null;
+  
+  // Convert /images/... to /public/images/...
+  const publicPath = imagePath.startsWith('/images/') 
+    ? `/public${imagePath}` 
+    : imagePath.startsWith('/public/') 
+      ? imagePath 
+      : `/public/images/${imagePath}`;
+  
+  const imageModule = publicImages[publicPath];
+  return imageModule?.default || null;
+}
+
+// Try to resolve the image for optimization
+const resolvedImage = src ? resolveImage(src) : null;
+const isExternal = src?.startsWith('http://') || src?.startsWith('https://');
+---
+
+{resolvedImage ? (
+  <!-- Optimized image using Astro's Image component -->
+  <Image 
+    src={resolvedImage}
+    alt={alt}
+    class={className}
+    width={width || resolvedImage.width}
+    height={height || resolvedImage.height}
+    loading={loading}
+    decoding="async"
+    format={format}
+    quality={quality}
+  />
+) : src ? (
+  <!-- Fallback for external URLs or unresolved paths -->
+  <img 
+    src={src} 
+    alt={alt}
+    class={className}
+    width={width}
+    height={height}
+    loading={loading}
+    decoding="async"
+    fetchpriority={fetchpriority}
+  />
+) : (
+  <slot>
+    <div class={`bg-muted flex items-center justify-center ${className}`}>
+      <span class="text-muted-foreground text-xs uppercase tracking-widest">No Image</span>
+    </div>
+  </slot>
+)}

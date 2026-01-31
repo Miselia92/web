@@ -6,7 +6,10 @@ const projects = defineCollection({
         title: z.string(),
         year: z.string().optional(),
         coverImage: z.string().optional(),
-        images: z.array(z.string()).optional(),
+        images: z.array(z.object({
+            src: z.string(),
+            description: z.string().optional().default(""),
+        })).optional(),
         description: z.string().optional(),
         category: z.enum(['photography', 'video-art', 'documentary', 'printmaking', 'others']).default('others'),
         // For ordering if needed, or we can use default date

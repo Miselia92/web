@@ -24,10 +24,27 @@ export const projects: Collection = {
             label: "Cover Image",
         },
         {
-            type: "image",
+            type: "object",
             name: "images",
             label: "Images",
             list: true,
+            ui: {
+                itemProps: (item) => {
+                    return { label: item?.src ? item.src.split('/').pop() : 'New Image' }
+                },
+            },
+            fields: [
+                {
+                    type: "image",
+                    name: "src",
+                    label: "Image",
+                },
+                {
+                    type: "string",
+                    name: "description",
+                    label: "Description",
+                }
+            ]
         },
         {
             type: "string",
@@ -59,6 +76,11 @@ export const projects: Collection = {
             name: "body",
             label: "Body",
             isBody: true,
+        },
+        {
+            type: "string",
+            name: "subProjectClassification",
+            label: "Sub-project Classification",
         },
     ],
 };

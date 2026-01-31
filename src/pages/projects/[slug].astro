@@ -3,6 +3,7 @@ import Layout from '@/layouts/Layout.astro';
 import { getProjects } from '@/lib/content-tina';
 import { RichText } from '@/components/tina/RichText';
 import OptimizedImage from '@/components/OptimizedImage.astro';
+import { ProjectLightbox } from '@/components/ProjectLightbox';
 
 export async function getStaticPaths() {
   const projects = await getProjects();
@@ -13,7 +14,7 @@ export async function getStaticPaths() {
 }
 
 const { project } = Astro.props;
-const { title, year, body, images } = project;
+const { title, year, body, images, subProjectClassification } = project;
 ---
 
 <Layout title={`${title} | Mark Power`}>
@@ -22,6 +23,7 @@ const { title, year, body, images } = project;
     <div class="mb-16 md:w-2/3">
       <h1 class="text-3xl md:text-5xl font-light mb-6 uppercase tracking-wide">{title}</h1>
       <div class="text-sm md:text-base leading-relaxed text-muted-foreground space-y-4 max-w-prose">
+        {subProjectClassification && <p class="text-lg text-primary mb-2">{subProjectClassification}</p>}
         <p class="text-muted-foreground mb-6">{year}</p>
         <RichText content={body} client:visible />
       </div>
@@ -30,16 +32,45 @@ const { title, year, body, images } = project;
     {images && images.length > 0 && (
       <div class="space-y-12 md:space-y-24">
         {images.map((image, index) => (
-          <div class="w-full">
+          (image?.src) && (
+          <div 
+            class="max-w-4xl mx-auto project-image-trigger cursor-pointer" 
+            data-index={index}
+          >
             <OptimizedImage 
-              src={image} 
+              src={image.src} 
               alt={`${title} - Image ${index + 1}`}
-              class="w-full h-auto"
+              class="w-full h-auto shadow-md"
             />
+            {image.description && (
+              <p class="mt-4 text-sm text-gray-600 italic dark:text-gray-500">{image.description}</p>
+            )}
           </div>
+          )
         ))}
       </div>
     )}
 
+
+    {images && images.length > 0 && (
+      <ProjectLightbox images={images} client:idle />
+    )}
   </div>
 </Layout>
+
+<script>
+  // Add click listeners to all project images
+  const imageContainers = document.querySelectorAll('.project-image-trigger');
+  
+  imageContainers.forEach((container) => {
+    container.addEventListener('click', () => {
+      const index = parseInt(container.getAttribute('data-index') || '0', 10);
+      
+      // Dispatch custom event to open lightbox
+      const event = new CustomEvent('open-project-lightbox', {
+        detail: { index }
+      });
+      window.dispatchEvent(event);
+    });
+  });
+</script>

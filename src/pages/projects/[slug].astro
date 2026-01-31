@@ -15,6 +15,12 @@ export async function getStaticPaths() {
 
 const { project } = Astro.props;
 const { title, year, body, images, subProjectClassification } = project;
+
+const getYouTubeId = (url: string) => {
+  const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+  const match = url.match(regExp);
+  return (match && match[2].length === 11) ? match[2] : null;
+};
 ---
 
 <Layout title={`${title} | Mark Power`}>
@@ -31,8 +37,29 @@ const { title, year, body, images, subProjectClassification } = project;
 
     {images && images.length > 0 && (
       <div class="space-y-12 md:space-y-24">
-        {images.map((image, index) => (
-          (image?.src) && (
+        {images.map((image, index) => {
+          if (image?.youtubeUrl) {
+            const videoId = getYouTubeId(image.youtubeUrl);
+            if (videoId) {
+              return (
+                <div class="max-w-4xl mx-auto mb-12" data-index={index}>
+                  <div class="relative w-full aspect-video bg-black/5 rounded-lg overflow-hidden shadow-md">
+                    <iframe
+                      src={`https://www.youtube.com/embed/${videoId}`}
+                      class="absolute top-0 left-0 w-full h-full"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                  {image.description && (
+                    <p class="mt-4 text-sm text-gray-600 italic dark:text-gray-500">{image.description}</p>
+                  )}
+                </div>
+              );
+            }
+          }
+
+          return (image?.src) && (
           <div 
             class="max-w-4xl mx-auto project-image-trigger cursor-pointer" 
             data-index={index}
@@ -42,12 +69,12 @@ const { title, year, body, images, subProjectClassification } = project;
               alt={`${title} - Image ${index + 1}`}
               class="w-full h-auto shadow-md"
             />
-            {image.description && (
+             {image.description && (
               <p class="mt-4 text-sm text-gray-600 italic dark:text-gray-500">{image.description}</p>
             )}
           </div>
           )
-        ))}
+        })}
       </div>
     )}
 

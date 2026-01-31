@@ -3,7 +3,8 @@ import { useSwipeable } from 'react-swipeable';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface ProjectImage {
-    src: string;
+    src?: string;
+    youtubeUrl?: string;
     description?: string;
     // TinaCMS might return other fields, but we only strictly need src and description
     [key: string]: any;
@@ -12,6 +13,12 @@ interface ProjectImage {
 interface ProjectLightboxProps {
     images: ProjectImage[];
 }
+
+const getYouTubeId = (url: string) => {
+    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+    const match = url.match(regExp);
+    return (match && match[2].length === 11) ? match[2] : null;
+};
 
 export const ProjectLightbox: React.FC<ProjectLightboxProps> = ({ images }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -76,6 +83,9 @@ export const ProjectLightbox: React.FC<ProjectLightboxProps> = ({ images }) => {
 
     if (!isOpen) return null;
 
+    const currentImage = images[currentIndex];
+    const videoId = currentImage.youtubeUrl ? getYouTubeId(currentImage.youtubeUrl) : null;
+
     return (
         <div
             className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm"
@@ -124,22 +134,33 @@ export const ProjectLightbox: React.FC<ProjectLightboxProps> = ({ images }) => {
                 onClick={(e) => e.stopPropagation()} // Prevent close when clicking image area (swipe area)
             >
                 <div
-                    className="relative max-w-full max-h-full flex flex-col items-center justify-center"
+                    className="relative w-full max-w-full max-h-full flex flex-col items-center justify-center"
                 >
-                    <img
-                        src={images[currentIndex].src}
-                        alt={images[currentIndex].description || `Project image ${currentIndex + 1}`}
-                        className="max-w-full max-h-[85vh] object-contain shadow-2xl"
-                        draggable={false}
-                    />
+                    {videoId ? (
+                        <div className="w-full max-w-5xl aspect-video bg-black rounded shadow-2xl overflow-hidden">
+                            <iframe
+                                src={`https://www.youtube.com/embed/${videoId}`}
+                                className="w-full h-full"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                            />
+                        </div>
+                    ) : (
+                        <img
+                            src={currentImage.src}
+                            alt={currentImage.description || `Project image ${currentIndex + 1}`}
+                            className="max-w-full max-h-[85vh] object-contain shadow-2xl"
+                            draggable={false}
+                        />
+                    )}
 
                     {/* Description */}
-                    {(images[currentIndex].description) && (
+                    {(currentImage.description) && (
                         <div
                             className="mt-4 text-center max-w-prose"
                         >
                             <p className="text-white/90 text-sm md:text-base font-medium tracking-wide">
-                                {images[currentIndex].description}
+                                {currentImage.description}
                             </p>
                         </div>
                     )}

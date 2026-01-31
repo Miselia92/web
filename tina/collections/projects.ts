@@ -30,6 +30,7 @@ export const projects: Collection = {
             list: true,
             ui: {
                 itemProps: (item) => {
+                    if (item?.youtubeUrl) return { label: 'YouTube Video' }
                     return { label: item?.src ? item.src.split('/').pop() : 'New Image' }
                 },
             },
@@ -38,6 +39,12 @@ export const projects: Collection = {
                     type: "image",
                     name: "src",
                     label: "Image",
+                },
+                {
+                    type: "string",
+                    name: "youtubeUrl",
+                    label: "YouTube URL",
+                    description: "Paste the full YouTube URL here (e.g. https://www.youtube.com/watch?v=...)",
                 },
                 {
                     type: "string",

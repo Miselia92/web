@@ -7,7 +7,8 @@ const projects = defineCollection({
         year: z.string().optional(),
         coverImage: z.string().optional(),
         images: z.array(z.object({
-            src: z.string(),
+            src: z.string().optional(),
+            youtubeUrl: z.string().optional(),
             description: z.string().optional().default(""),
         })).optional(),
         description: z.string().optional(),

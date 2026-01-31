@@ -44,7 +44,7 @@ const {
 // Import all images from public/images using glob
 // This allows Astro to process them at build time
 const publicImages = import.meta.glob<{ default: ImageMetadata }>(
-  '/public/images/**/*.{jpeg,jpg,png,gif,webp,avif,JPEG,JPG,PNG,GIF,WEBP,AVIF}',
+  '../../public/images/**/*.{jpeg,jpg,png,gif,webp,avif,JPEG,JPG,PNG,GIF,WEBP,AVIF}',
   { eager: true }
 );
 
@@ -57,12 +57,14 @@ function resolveImage(imagePath: string): ImageMetadata | null {
   // We must decode the path to match the glob keys
   const decodedPath = decodeURI(imagePath);
   
-  // Convert /images/... to /public/images/...
+  // Convert /images/... to ../../public/images/... to match glob keys
   const publicPath = decodedPath.startsWith('/images/') 
-    ? `/public${decodedPath}` 
+    ? `../../public${decodedPath}` 
     : decodedPath.startsWith('/public/') 
-      ? decodedPath 
-      : `/public/images/${decodedPath}`;
+      ? `../..${decodedPath}` 
+      : decodedPath.startsWith('../../public/')
+        ? decodedPath
+        : `../../public/images/${decodedPath.startsWith('/') ? decodedPath.slice(1) : decodedPath}`;
   
   const imageModule = publicImages[publicPath];
   return imageModule?.default || null;
@@ -81,6 +83,10 @@ const isExternal = src?.startsWith('http://') || src?.startsWith('https://');
     class={className}
     width={width || resolvedImage.width}
     height={height || resolvedImage.height}
+    style={{ 
+      aspectRatio: `${resolvedImage.width} / ${resolvedImage.height}`,
+      objectFit: className.includes('object-') ? undefined : 'contain' 
+    }}
     loading={loading}
     decoding="async"
     format={format}
@@ -94,6 +100,9 @@ const isExternal = src?.startsWith('http://') || src?.startsWith('https://');
     class={className}
     width={width}
     height={height}
+    style={{ 
+      objectFit: className.includes('object-') ? undefined : 'contain' 
+    }}
     loading={loading}
     decoding="async"
     fetchpriority={fetchpriority}

@@ -9,8 +9,8 @@ const images = heroImages || [];
 ---
 
 <Layout title="Mark Power | Magnum Photos">
-	<div class="w-full flex justify-center items-center min-h-[80vh] px-6">
-		<div class="w-full max-w-7xl mx-auto">
+	<div class="fixed inset-0 z-0 flex justify-center items-center px-6 pointer-events-none">
+		<div class="w-full max-w-7xl mx-auto pointer-events-auto">
 			<!-- Hero Carousel -->
 			{images.length > 0 && (
 			<div id="hero-carousel" class="relative w-[95%] mx-auto grid items-center overflow-hidden">
@@ -18,7 +18,7 @@ const images = heroImages || [];
 					<OptimizedImage 
 						src={src} 
 						alt={`Hero Image ${index + 1}`} 
-						class={`col-start-1 row-start-1 w-full h-auto transition-opacity duration-1000 ${index === 0 ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
+						class={`col-start-1 row-start-1 w-full h-auto max-h-[70vh] object-contain justify-self-center transition-opacity duration-1000 ${index === 0 ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
 						loading={index === 0 ? 'eager' : 'lazy'}
 						fetchpriority={index === 0 ? 'high' : 'low'}
 					/>

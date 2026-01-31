@@ -65,10 +65,10 @@ const sortedClassifications = Object.keys(groupedProjects).sort((a, b) => {
           {sortedClassifications.map((classification) => (
             <section>
               {classification !== 'Others' && (
-                <h2 class="text-xl font-light mb-8 text-primary border-b pb-2">{classification}</h2>
+                <h2 class="text-xl font-light mb-8 text-primary">{classification}</h2>
               )}
               {classification === 'Others' && sortedClassifications.length > 1 && (
-                 <h2 class="text-xl font-light mb-8 text-primary border-b pb-2">Others</h2>
+                 <h2 class="text-xl font-light mb-8 text-primary">Others</h2>
               )}
               
               <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 gap-y-12">

@@ -14,6 +14,11 @@ export const writing: Collection = {
             required: true,
         },
         {
+            type: "string",
+            name: "title_zh",
+            label: "Title (Chinese)",
+        },
+        {
             type: "datetime",
             name: "date",
             label: "Date",
@@ -32,6 +37,14 @@ export const writing: Collection = {
             },
         },
         {
+            type: "string",
+            name: "description_zh",
+            label: "Description (Chinese)",
+            ui: {
+                component: "textarea",
+            },
+        },
+        {
             type: "image",
             name: "coverImage",
             label: "Cover Image",
@@ -41,6 +54,11 @@ export const writing: Collection = {
             name: "body",
             label: "Body",
             isBody: true,
+        },
+        {
+            type: "rich-text",
+            name: "body_zh",
+            label: "Body (Chinese)",
         },
     ],
 };

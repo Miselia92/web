@@ -23,6 +23,11 @@ export const connect: Collection = {
             required: true,
         },
         {
+            type: "string",
+            name: "title_zh",
+            label: "Title (Chinese)",
+        },
+        {
             type: "object",
             name: "sections",
             label: "Sections",
@@ -35,13 +40,28 @@ export const connect: Collection = {
                 },
                 {
                     type: "string",
+                    name: "title_zh",
+                    label: "Title (Chinese)",
+                },
+                {
+                    type: "string",
                     name: "name",
                     label: "Name",
                 },
                 {
                     type: "string",
+                    name: "name_zh",
+                    label: "Name (Chinese)",
+                },
+                {
+                    type: "string",
                     name: "address",
                     label: "Address",
+                },
+                {
+                    type: "string",
+                    name: "address_zh",
+                    label: "Address (Chinese)",
                 },
                 {
                     type: "string",

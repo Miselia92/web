@@ -22,6 +22,11 @@ export const global: Collection = {
             type: "string",
             name: "siteTitle",
             label: "Default Site Title",
+        },
+        {
+            type: "string",
+            name: "siteTitle_zh",
+            label: "Default Site Title (Chinese)",
         }
     ],
 };

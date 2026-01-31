@@ -13,9 +13,24 @@ export const seoSchema: TinaField = {
         },
         {
             type: "string",
+            name: "title_zh",
+            label: "Title (Chinese)",
+            description: "Overrides the default page title (Chinese)",
+        },
+        {
+            type: "string",
             name: "description",
             label: "Description",
             description: "Overrides the default page description",
+            ui: {
+                component: "textarea",
+            },
+        },
+        {
+            type: "string",
+            name: "description_zh",
+            label: "Description (Chinese)",
+            description: "Overrides the default page description (Chinese)",
             ui: {
                 component: "textarea",
             },

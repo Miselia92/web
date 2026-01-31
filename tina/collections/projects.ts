@@ -15,6 +15,11 @@ export const projects: Collection = {
         },
         {
             type: "string",
+            name: "title_zh",
+            label: "Title (Chinese)",
+        },
+        {
+            type: "string",
             name: "year",
             label: "Year",
         },
@@ -50,6 +55,11 @@ export const projects: Collection = {
                     type: "string",
                     name: "description",
                     label: "Description",
+                },
+                {
+                    type: "string",
+                    name: "description_zh",
+                    label: "Description (Chinese)",
                 }
             ]
         },
@@ -57,6 +67,14 @@ export const projects: Collection = {
             type: "string",
             name: "description",
             label: "Description",
+            ui: {
+                component: "textarea",
+            },
+        },
+        {
+            type: "string",
+            name: "description_zh",
+            label: "Description (Chinese)",
             ui: {
                 component: "textarea",
             },
@@ -85,9 +103,19 @@ export const projects: Collection = {
             isBody: true,
         },
         {
+            type: "rich-text",
+            name: "body_zh",
+            label: "Body (Chinese)",
+        },
+        {
             type: "string",
             name: "subProjectClassification",
             label: "Sub-project Classification",
+        },
+        {
+            type: "string",
+            name: "subProjectClassification_zh",
+            label: "Sub-project Classification (Chinese)",
         },
     ],
 };

@@ -22,6 +22,7 @@ const { title, description = "The photography of Mark Power.", seo } = Astro.pro
 const home = await getEntry('pages', 'home');
 const globalConfig = await getGlobal();
 const brandName = home?.data?.brandName || globalConfig.siteTitle;
+const brandNameZh = home?.data?.brandName_zh || globalConfig.siteTitle_zh;
 
 const finalTitle = seo?.title || globalConfig.seo?.title || title;
 const finalDescription = seo?.description || globalConfig.seo?.description || description;
@@ -33,6 +34,13 @@ const finalCanonical = seo?.canonical || globalConfig.seo?.canonical;
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
+        <script is:inline>
+            // Initialize language class immediately to prevent FOUC
+            const savedLang = localStorage.getItem('site_language');
+            const browserLang = navigator.language.toLowerCase().startsWith('zh') ? 'zh' : 'en';
+            const lang = savedLang || browserLang;
+            document.documentElement.classList.add(`lang-${lang}`);
+        </script>
 		<meta name="description" content={finalDescription} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -47,7 +55,7 @@ const finalCanonical = seo?.canonical || globalConfig.seo?.canonical;
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 	</head>
 	<body class="flex flex-col min-h-screen text-foreground bg-background antialiased font-sans">
-		<Header client:load brandName={brandName} />
+		<Header client:load brandName={brandName} brandNameZh={brandNameZh} />
 		<main class="flex-grow">
 			<slot />
 		</main>

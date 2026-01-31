@@ -17,6 +17,11 @@ description: This is an example project description for Project 1.
 category: photography
 order: 1
 subProjectClassification: Sample Classification
+subProjectClassification_zh: 範例分類
+title_zh: 停校日
+description_zh: 這是項目1的範例描述。
+body_zh: |
+  這是項目1的內容佔位符。它展示了項目詳細頁面與下載的圖像。
 ---
 
 This is a placeholder content for Project 1. It demonstrates how the project detail page looks with the downloaded image.

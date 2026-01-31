@@ -1,48 +1,60 @@
 import React from "react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-
-const navItems = [
-    {
-        label: "Projects",
-        href: "/projects",
-        subItems: [
-            { label: "Photography", href: "/projects/category/photography" },
-            { label: "Video Art", href: "/projects/category/video-art" },
-            { label: "Documentary", href: "/projects/category/documentary" },
-            { label: "Printmaking", href: "/projects/category/printmaking" },
-            { label: "Others", href: "/projects/category/others" },
-        ],
-    },
-    { label: "Writing", href: "/writing" },
-    { label: "Connect", href: "/connect" },
-    { label: "About", href: "/biography" }, // Mapped from About -> /biography as per original
-];
+import { LanguageProvider, useLanguage } from "@/lib/LanguageContext";
+import { getTranslation, UI_TRANSLATIONS } from "@/lib/i18n";
+import { LanguageSwitcher } from "../LanguageSwitcher";
 
 interface HeaderProps {
     brandName?: string;
+    brandNameZh?: string;
 }
 
-export function Header({ brandName = "Mark Power" }: HeaderProps) {
+function HeaderContent({ brandName = "Mark Power", brandNameZh }: HeaderProps) {
+    // We don't rely on state for text rendering anymore to avoid FOUC (flash of unstyled content) / hydration mismatches
+    // Instead we render both and hide one with CSS (which is set immediately in <head>)
+    const { nav, categories } = UI_TRANSLATIONS.en;
+    const { nav: navZh, categories: categoriesZh } = UI_TRANSLATIONS.zh;
+
+    const navItems = [
+        {
+            labelEn: nav.projects,
+            labelZh: navZh.projects,
+            href: "/projects",
+            subItems: [
+                { labelEn: categories.photography, labelZh: categoriesZh.photography, href: "/projects/category/photography" },
+                { labelEn: categories['video-art'], labelZh: categoriesZh['video-art'], href: "/projects/category/video-art" },
+                { labelEn: categories.documentary, labelZh: categoriesZh.documentary, href: "/projects/category/documentary" },
+                { labelEn: categories.printmaking, labelZh: categoriesZh.printmaking, href: "/projects/category/printmaking" },
+                { labelEn: categories.others, labelZh: categoriesZh.others, href: "/projects/category/others" },
+            ],
+        },
+        { labelEn: nav.writing, labelZh: navZh.writing, href: "/writing" },
+        { labelEn: nav.connect, labelZh: navZh.connect, href: "/connect" },
+        { labelEn: nav.about, labelZh: navZh.about, href: "/biography" },
+    ];
+
     return (
         <header className="w-full py-8 px-6 md:px-12 flex flex-col md:flex-row justify-between items-center bg-background border-b border-border/40 sticky top-0 z-50 backdrop-blur-sm bg-background/95 supports-[backdrop-filter]:bg-background/60">
-            <div className="mb-4 md:mb-0">
+            <div className="mb-4 md:mb-0 flex items-center gap-4">
                 <a href="/" className="text-2xl font-bold tracking-widest uppercase hover:opacity-80 transition-opacity">
-                    {brandName}
+                    <span className="lang-en-only">{brandName}</span>
+                    <span className="lang-zh-only">{brandNameZh || brandName}</span>
                 </a>
             </div>
 
-            <nav>
-                <ul className="flex flex-wrap justify-center gap-6 text-sm font-medium tracking-wide text-muted-foreground">
+            <nav className="flex items-center gap-8">
+                <ul className="flex flex-wrap justify-center gap-6 text-sm font-medium tracking-wide text-muted-foreground items-center">
                     {navItems.map((item) => (
-                        <li key={item.label} className="relative group">
+                        <li key={item.href} className="relative group">
                             <a
                                 href={item.href}
                                 className={cn(
                                     "hover:text-foreground transition-colors uppercase text-xs block py-2"
                                 )}
                             >
-                                {item.label}
+                                <span className="lang-en-only">{item.labelEn}</span>
+                                <span className="lang-zh-only">{item.labelZh}</span>
                             </a>
 
                             {item.subItems && (
@@ -50,11 +62,12 @@ export function Header({ brandName = "Mark Power" }: HeaderProps) {
                                     <div className="bg-popover border border-border shadow-md py-2 flex flex-col items-center rounded-sm">
                                         {item.subItems.map((sub) => (
                                             <a
-                                                key={sub.label}
+                                                key={sub.labelEn}
                                                 href={sub.href}
                                                 className="block px-4 py-2 text-xs uppercase text-muted-foreground hover:text-foreground hover:bg-accent transition-colors w-full text-center whitespace-nowrap"
                                             >
-                                                {sub.label}
+                                                <span className="lang-en-only">{sub.labelEn}</span>
+                                                <span className="lang-zh-only">{sub.labelZh}</span>
                                             </a>
                                         ))}
                                     </div>
@@ -62,8 +75,19 @@ export function Header({ brandName = "Mark Power" }: HeaderProps) {
                             )}
                         </li>
                     ))}
+                    <li>
+                        <LanguageSwitcher />
+                    </li>
                 </ul>
             </nav>
         </header>
+    );
+}
+
+export function Header(props: HeaderProps) {
+    return (
+        <LanguageProvider>
+            <HeaderContent {...props} />
+        </LanguageProvider>
     );
 }

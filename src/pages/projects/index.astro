@@ -1,6 +1,7 @@
 ---
 import Layout from '@/layouts/Layout.astro';
 import { getProjects } from '@/lib/content-tina';
+import { getTranslation } from '@/lib/i18n';
 import OptimizedImage from '@/components/OptimizedImage.astro';
 
 const projects = await getProjects();
@@ -32,16 +33,29 @@ const sortedClassifications = Object.keys(groupedProjects).sort((a, b) => {
 
 <Layout title="Projects | Mark Power">
   <div class="px-6 md:px-12 py-12">
-    <h1 class="text-3xl font-light mb-12 uppercase tracking-wide">Projects</h1>
+    <h1 class="text-3xl font-light mb-12 uppercase tracking-wide">
+        <span class="lang-en-only">Projects</span>
+        <span class="lang-zh-only">作品</span>
+    </h1>
     
     <div class="space-y-16">
-      {sortedClassifications.map((classification) => (
+      {sortedClassifications.map((classification) => {
+        // Find a Chinese translation for this classification from any project in the group
+        const zhClassification = groupedProjects[classification].find(p => p.subProjectClassification_zh)?.subProjectClassification_zh;
+        
+        return (
         <section>
           {classification !== 'Others' && (
-            <h2 class="text-xl font-light mb-8 text-primary border-b pb-2">{classification}</h2>
+            <h2 class="text-xl font-light mb-8 text-primary border-b pb-2">
+                <span class="lang-en-only">{getTranslation('en').categories[classification] || classification}</span>
+                <span class="lang-zh-only">{getTranslation('zh').categories[classification] || zhClassification || classification}</span>
+            </h2>
           )}
           {classification === 'Others' && sortedClassifications.length > 1 && (
-             <h2 class="text-xl font-light mb-8 text-primary border-b pb-2">Others</h2>
+             <h2 class="text-xl font-light mb-8 text-primary border-b pb-2">
+                <span class="lang-en-only">Others</span>
+                <span class="lang-zh-only">其他</span>
+             </h2>
           )}
           
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 gap-y-12">
@@ -61,7 +75,8 @@ const sortedClassifications = Object.keys(groupedProjects).sort((a, b) => {
                    )}
                 </div>
                 <h2 class="text-lg font-normal group-hover:text-muted-foreground transition-colors uppercase tracking-wide">
-                  {project.title}
+                  <span class="lang-en-only">{project.title}</span>
+                  <span class="lang-zh-only">{project.title_zh || project.title}</span>
                 </h2>
                 {project.year && (
                   <p class="text-xs text-muted-foreground mt-1">{project.year}</p>
@@ -70,7 +85,8 @@ const sortedClassifications = Object.keys(groupedProjects).sort((a, b) => {
             ))}
           </div>
         </section>
-      ))}
+        );
+      })}
     </div>
   </div>
 </Layout>

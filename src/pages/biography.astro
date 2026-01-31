@@ -5,7 +5,7 @@ import { RichText } from '@/components/tina/RichText';
 import OptimizedImage from '@/components/OptimizedImage.astro';
 
 const page = await getAbout();
-const { portraitImage, title, body } = page;
+const { portraitImage, title, title_zh, body, body_zh } = page;
 ---
 
 <Layout title={`${title} | Mark Power`}>
@@ -30,9 +30,13 @@ const { portraitImage, title, body } = page;
     </div>
     
     <div class="md:w-2/3">
-      <h1 class="text-3xl font-light mb-8 uppercase tracking-wide">{title}</h1>
+      <h1 class="text-3xl font-light mb-8 uppercase tracking-wide">
+        <span class="lang-en-only">{title}</span>
+        <span class="lang-zh-only">{title_zh || title}</span>
+      </h1>
       <div class="prose prose-stone prose-lg max-w-none text-muted-foreground font-light">
-        <RichText content={body} client:visible />
+        <div class="lang-en-only"><RichText content={body} client:visible /></div>
+        <div class="lang-zh-only"><RichText content={body_zh} client:visible /></div>
       </div>
     </div>
   </div>

@@ -14,7 +14,7 @@ export async function getStaticPaths() {
 }
 
 const { project } = Astro.props;
-const { title, year, body, images, subProjectClassification } = project;
+const { title, title_zh, year, body, body_zh, images, subProjectClassification } = project;
 
 const getYouTubeId = (url: string) => {
   const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
@@ -27,11 +27,26 @@ const getYouTubeId = (url: string) => {
   <div class="px-6 md:px-12 py-12 max-w-7xl mx-auto">
     
     <div class="mb-16 md:w-2/3">
-      <h1 class="text-3xl md:text-5xl font-light mb-6 uppercase tracking-wide">{title}</h1>
+      <h1 class="text-3xl md:text-5xl font-light mb-6 uppercase tracking-wide">
+        <span class="lang-en-only">{title}</span>
+        <span class="lang-zh-only">{title_zh || title}</span>
+      </h1>
       <div class="text-sm md:text-base leading-relaxed text-muted-foreground space-y-4 max-w-prose">
-        {subProjectClassification && <p class="text-lg text-primary mb-2">{subProjectClassification}</p>}
+        {subProjectClassification && (
+            <p class="text-lg text-primary mb-2">
+                <span class="lang-en-only">{subProjectClassification}</span>
+                <span class="lang-zh-only">{project.subProjectClassification_zh || subProjectClassification}</span>
+            </p>
+        )}
         <p class="text-muted-foreground mb-6">{year}</p>
-        <RichText content={body} client:visible />
+        <div class="lang-en-only">
+            <RichText content={body} client:visible />
+        </div>
+        {body_zh && (
+            <div class="lang-zh-only">
+                <RichText content={body_zh} client:visible />
+            </div>
+        )}
       </div>
     </div>
 
@@ -52,7 +67,10 @@ const getYouTubeId = (url: string) => {
                     ></iframe>
                   </div>
                   {image.description && (
-                    <p class="mt-4 text-sm text-gray-600 italic dark:text-gray-500">{image.description}</p>
+                    <p class="mt-4 text-sm text-gray-600 italic dark:text-gray-500">
+                        <span class="lang-en-only">{image.description}</span>
+                        <span class="lang-zh-only">{image.description_zh || image.description}</span>
+                    </p>
                   )}
                 </div>
               );
@@ -70,7 +88,10 @@ const getYouTubeId = (url: string) => {
               class="w-full h-auto shadow-md"
             />
              {image.description && (
-              <p class="mt-4 text-sm text-gray-600 italic dark:text-gray-500">{image.description}</p>
+              <p class="mt-4 text-sm text-gray-600 italic dark:text-gray-500">
+                  <span class="lang-en-only">{image.description}</span>
+                  <span class="lang-zh-only">{image.description_zh || image.description}</span>
+              </p>
             )}
           </div>
           )

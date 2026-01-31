@@ -23,6 +23,11 @@ export const about: Collection = {
             required: true,
         },
         {
+            type: "string",
+            name: "title_zh",
+            label: "Title (Chinese)",
+        },
+        {
             type: "image",
             name: "portraitImage",
             label: "Portrait Image",
@@ -32,6 +37,11 @@ export const about: Collection = {
             name: "body",
             label: "Body",
             isBody: true,
+        },
+        {
+            type: "rich-text",
+            name: "body_zh",
+            label: "Body (Chinese)",
         },
     ],
 };

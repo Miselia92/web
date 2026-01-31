@@ -22,6 +22,11 @@ export const home: Collection = {
             label: "Brand Name",
         },
         {
+            type: "string",
+            name: "brandName_zh",
+            label: "Brand Name (Chinese)",
+        },
+        {
             type: "image",
             name: "heroImages",
             label: "Hero Images",

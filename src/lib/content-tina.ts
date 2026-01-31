@@ -34,3 +34,8 @@ export async function getConnect() {
     const response = await client.queries.connect({ relativePath: "connect.md" });
     return response.data.connect;
 }
+
+export async function getGlobal() {
+    const response = await client.queries.global({ relativePath: "index.json" });
+    return response.data.global;
+}

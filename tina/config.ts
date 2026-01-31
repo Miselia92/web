@@ -4,6 +4,7 @@ import { writing } from "./collections/writing";
 import { home } from "./collections/home";
 import { about } from "./collections/about";
 import { connect } from "./collections/connect";
+import { global } from "./collections/global";
 
 const branch =
     process.env.GITHUB_BRANCH ||
@@ -26,6 +27,6 @@ export default defineConfig({
         },
     },
     schema: {
-        collections: [home, about, connect, projects, writing],
+        collections: [home, about, connect, projects, writing, global],
     },
 });

@@ -1,5 +1,6 @@
 ---
 import { getEntry } from 'astro:content';
+import { getGlobal } from '@/lib/content-tina';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 
@@ -8,23 +9,39 @@ import '@/styles/global.css';
 interface Props {
 	title: string;
 	description?: string;
+    seo?: {
+        title?: string;
+        description?: string;
+        image?: string;
+        canonical?: string;
+    }
 }
 
-const { title, description = "The photography of Mark Power." } = Astro.props;
+const { title, description = "The photography of Mark Power.", seo } = Astro.props;
 
 const home = await getEntry('pages', 'home');
-const brandName = home?.data?.brandName;
+const globalConfig = await getGlobal();
+const brandName = home?.data?.brandName || globalConfig.siteTitle;
+
+const finalTitle = seo?.title || globalConfig.seo?.title || title;
+const finalDescription = seo?.description || globalConfig.seo?.description || description;
+const finalImage = seo?.image || globalConfig.seo?.image;
+const finalCanonical = seo?.canonical || globalConfig.seo?.canonical;
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content={description} />
+		<meta name="description" content={finalDescription} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+		<title>{finalTitle}</title>
+        {finalImage && <meta property="og:image" content={finalImage} />}
+        {finalCanonical && <link rel="canonical" href={finalCanonical} />}
+        <meta property="og:title" content={finalTitle} />
+        <meta property="og:description" content={finalDescription} />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">

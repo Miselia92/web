@@ -11,7 +11,7 @@
   "dependencies": {
     "@astrojs/react": "^4.1.0",
     "@tailwindcss/vite": "^4.1.18",
-    "@tinacms/cli": "^1.6.0",
+    "@tinacms/cli": "^2.1.1",
     "astro": "^5.16.7",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
@@ -20,7 +20,7 @@
     "react-dom": "^18.3.0",
     "tailwind-merge": "^2.6.0",
     "tailwindcss": "^4.1.18",
-    "tinacms": "^2.2.0"
+    "tinacms": "^3.3.1"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.19",

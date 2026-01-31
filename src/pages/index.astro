@@ -13,12 +13,12 @@ const images = heroImages || [];
 		<div class="w-full max-w-7xl mx-auto">
 			<!-- Hero Carousel -->
 			{images.length > 0 && (
-			<div id="hero-carousel" class="relative w-[95%] mx-auto aspect-[3/2] bg-muted overflow-hidden">
+			<div id="hero-carousel" class="relative w-[95%] mx-auto grid items-center overflow-hidden">
 				{images.map((src, index) => (
 					<OptimizedImage 
 						src={src} 
 						alt={`Hero Image ${index + 1}`} 
-						class={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ${index === 0 ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
+						class={`col-start-1 row-start-1 w-full h-auto transition-opacity duration-1000 ${index === 0 ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
 						loading={index === 0 ? 'eager' : 'lazy'}
 						fetchpriority={index === 0 ? 'high' : 'low'}
 					/>

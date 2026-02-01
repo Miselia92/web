@@ -33,7 +33,7 @@ const sortedClassifications = Object.keys(groupedProjects).sort((a, b) => {
 
 <Layout title="Projects | Mark Power">
   <div class="px-6 md:px-12 py-12">
-    <h1 class="text-3xl font-light mb-12 uppercase tracking-wide">
+    <h1 class="text-3xl font-bold mb-12 uppercase tracking-wide">
         <span class="lang-en-only">Projects</span>
         <span class="lang-zh-only">作品</span>
     </h1>
@@ -46,13 +46,13 @@ const sortedClassifications = Object.keys(groupedProjects).sort((a, b) => {
         return (
         <section>
           {classification !== 'Others' && (
-            <h2 class="text-xl font-light mb-8 text-primary">
+            <h2 class="text-xl font-bold mb-8 text-primary">
                 <span class="lang-en-only">{getTranslation('en').categories[classification] || classification}</span>
                 <span class="lang-zh-only">{getTranslation('zh').categories[classification] || zhClassification || classification}</span>
             </h2>
           )}
           {classification === 'Others' && sortedClassifications.length > 1 && (
-             <h2 class="text-xl font-light mb-8 text-primary">
+             <h2 class="text-xl font-bold mb-8 text-primary">
                 <span class="lang-en-only">Others</span>
                 <span class="lang-zh-only">其他</span>
              </h2>

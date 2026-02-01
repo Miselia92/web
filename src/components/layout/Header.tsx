@@ -37,7 +37,7 @@ function HeaderContent({ brandName = "Mark Power", brandNameZh }: HeaderProps) {
     return (
         <header className="w-full py-8 px-6 md:px-12 flex flex-col md:flex-row justify-between items-center bg-background border-b border-border/40 sticky top-0 z-50 backdrop-blur-sm bg-background/95 supports-[backdrop-filter]:bg-background/60">
             <div className="mb-4 md:mb-0 flex items-center gap-4">
-                <a href="/" className="text-2xl font-bold tracking-widest uppercase hover:opacity-80 transition-opacity">
+                <a href="/" className="text-3xl font-extrabold tracking-widest uppercase hover:opacity-80 transition-opacity">
                     <span className="lang-en-only">{brandName}</span>
                     <span className="lang-zh-only">{brandNameZh || brandName}</span>
                 </a>

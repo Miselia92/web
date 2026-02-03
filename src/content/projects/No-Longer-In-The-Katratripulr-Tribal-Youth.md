@@ -32,6 +32,8 @@ images:
   - src: ''
     description: ''
 category: photography
+body_zh: ''
 subProjectClassification: Kartratripulr
+subProjectClassification_zh: 卡大地布系列
 ---
 

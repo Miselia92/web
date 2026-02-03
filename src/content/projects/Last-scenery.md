@@ -8,5 +8,7 @@ description: 'Four years after a friend’s sudden death, I reconstructed the tr
 description_zh: 在朋友意外過世後的四年後，我透過田調訪談拼湊出他生命中最後幾小時的足跡，以那年購買已經過期的底片拍著沿途的風景，好像可以靠近他生命所最後看到的景象。
 category: video-art
 body_zh: ''
+subProjectClassification: 'Project:Blank Film'
+subProjectClassification_zh: 白片計畫
 ---
 

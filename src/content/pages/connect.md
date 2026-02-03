@@ -12,7 +12,7 @@ sections:
     link: 'https://yuhongchen.com'
     linkText: ''
   - title: Studio
-    title_zh: 工作室
+    title_zh: 商業工作室
     name: Second Street Studio
     name_zh: Second Street Studio
     address: 'Taipei,Taiwan'

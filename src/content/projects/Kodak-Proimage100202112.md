@@ -1,6 +1,7 @@
 ---
 title: 'Kodak Proimage100,2021.12'
 year: 2022-Now
+coverImage: '/images/Project:Blank Film/IMG_8780.JPG'
 images:
   - src: ''
     youtubeUrl: 'https://youtu.be/1YOaXhylBCs'

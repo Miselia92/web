@@ -9,7 +9,7 @@ sections:
     address: 'Taipei,Taiwan'
     address_zh: '台北, 台灣'
     email: chenyuhong0821@gmail.com
-    link: ''
+    link: 'https://yuhongchen.com'
     linkText: ''
   - title: Studio
     title_zh: 工作室

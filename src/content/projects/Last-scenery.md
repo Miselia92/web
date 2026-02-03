@@ -2,6 +2,7 @@
 title: Last scenery
 title_zh: 最後風景
 year: '2025'
+coverImage: '/images/Project:Blank Film/last scenery封面.png'
 images:
   - youtubeUrl: 'https://youtu.be/445WLLC1RQk'
 description: |-

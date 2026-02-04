@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { useSwipeable } from 'react-swipeable';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 
@@ -23,6 +23,8 @@ const getYouTubeId = (url: string) => {
 export const ProjectLightbox: React.FC<ProjectLightboxProps> = ({ images }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
+    const playerRef = useRef<any>(null);
+    const playerContainerRef = useRef<HTMLDivElement | null>(null);
 
     // Handle opening via custom event
     useEffect(() => {
@@ -43,6 +45,53 @@ export const ProjectLightbox: React.FC<ProjectLightboxProps> = ({ images }) => {
             document.body.style.overflow = '';
         };
     }, [images.length]);
+
+    // Initialize/destroy Plyr when video changes
+    useEffect(() => {
+        if (!isOpen) {
+            // Destroy player when lightbox closes
+            if (playerRef.current) {
+                playerRef.current.destroy();
+                playerRef.current = null;
+            }
+            return;
+        }
+
+        const currentImage = images[currentIndex];
+        const videoId = currentImage?.youtubeUrl ? getYouTubeId(currentImage.youtubeUrl) : null;
+
+        // Cleanup previous player
+        if (playerRef.current) {
+            playerRef.current.destroy();
+            playerRef.current = null;
+        }
+
+        // Initialize new player if we have a video (dynamic import to avoid SSR issues)
+        if (videoId && playerContainerRef.current) {
+            // Small delay to ensure DOM is ready
+            const timer = setTimeout(async () => {
+                const playerElement = playerContainerRef.current?.querySelector('.plyr-lightbox-youtube');
+                if (playerElement) {
+                    // Dynamic import to avoid SSR issues
+                    const Plyr = (await import('plyr')).default;
+                    playerRef.current = new Plyr(playerElement, {
+                        controls: [
+                            'play-large', 'play', 'progress', 'current-time',
+                            'mute', 'volume', 'settings', 'fullscreen'
+                        ],
+                        youtube: {
+                            noCookie: true,
+                            rel: 0,
+                            showinfo: 0,
+                            iv_load_policy: 3,
+                            modestbranding: 1
+                        }
+                    });
+                }
+            }, 100);
+            return () => clearTimeout(timer);
+        }
+    }, [isOpen, currentIndex, images]);
 
     const closeLightbox = useCallback(() => {
         setIsOpen(false);
@@ -134,16 +183,16 @@ export const ProjectLightbox: React.FC<ProjectLightboxProps> = ({ images }) => {
                 onClick={(e) => e.stopPropagation()} // Prevent close when clicking image area (swipe area)
             >
                 <div
+                    ref={playerContainerRef}
                     className="relative w-full max-w-full max-h-full flex flex-col items-center justify-center"
                 >
                     {videoId ? (
                         <div className="w-full max-w-5xl aspect-video bg-black rounded shadow-2xl overflow-hidden">
-                            <iframe
-                                src={`https://www.youtube.com/embed/${videoId}`}
-                                className="w-full h-full"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowFullScreen
-                            />
+                            <div
+                                className="plyr-lightbox-youtube"
+                                data-plyr-provider="youtube"
+                                data-plyr-embed-id={videoId}
+                            ></div>
                         </div>
                     ) : (
                         <img

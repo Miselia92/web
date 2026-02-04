@@ -1,5 +1,6 @@
 ---
 title: 'Kodak Proimage100,2021.12'
+title_zh: 'Kodak Proimage100,2021.12'
 year: 2022-Now
 coverImage: '/images/Project:Blank%20Film/%E5%BA%95%E7%89%87%E6%9C%AC%E4%BA%BA2.jpg'
 images:

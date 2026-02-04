@@ -1,7 +1,7 @@
 ---
 title: 'Meifang Village in Erlin, Changhua: Heterogeneous Spaces on the Margins of a Science Park and the Performance of Temporality'
 title_zh: 彰化二林梅芳里：科技園區邊陲的異質空間及其時間性展演
-date: 2025-04-28T15:28:57.374Z
+date: 2025-04-25T15:28:57.374Z
 author: Yu Hong Chen
 body_zh: |
   一、緒論

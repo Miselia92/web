@@ -13,7 +13,7 @@ description: |-
   Through conversations and shared memories with those close to him, I began to reassemble the days surrounding the end of 2021, attempting to return to this roll of film. I find myself repeatedly asking: what does death leave behind? A memory, an emotional bond to a person—and if there is no tangible object, no material trace, no image left behind, does it eventually fade into forgetting?
 description_zh: |-
   2021年末，一個摯友意外在球場上過世，事發後10天我就入伍了，被迫抽離巨大的情緒之中。
-  在他離世之前一晚，他交給了我一卷剛拍好的底片，後來我沖洗出來，是一卷白片，透過和他周遭親友的對話、回憶，重新梳理2021年末的的這段日子，嘗試重返這卷底片，我總在想，死亡所留下的是什麼？一段回憶及對一個人的情感，如果沒有了實體的物質或是留下影像，是不是就會被遺忘？
+  在他離世之前一晚，他交給了我一卷剛拍好的底片，後來我沖洗出來，是一卷白片，透過和他周遭親友的對話、回憶，重新梳理2021年末的的這段日子，嘗試重返這卷底片，我總在想，死亡後所留下的是什麼？一段回憶及對一個人的情感，如果沒有了實體的物質或是留下影像，是不是就會被遺忘？
 category: documentary
 body_zh: ''
 subProjectClassification: 'Project:Blank Film'

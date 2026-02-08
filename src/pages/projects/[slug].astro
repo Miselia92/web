@@ -14,7 +14,7 @@ export async function getStaticPaths() {
 }
 
 const { project } = Astro.props;
-const { title, title_zh, year, body, body_zh, images, subProjectClassification } = project;
+const { title, title_zh, year, body, body_zh, images, subProjectClassification, description, description_zh } = project;
 
 const getYouTubeId = (url: string) => {
   const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
@@ -39,6 +39,12 @@ const getYouTubeId = (url: string) => {
             </p>
         )}
         <p class="text-muted-foreground mb-6">{year}</p>
+        {description && (
+          <div class="mb-6">
+            <p class="lang-en-only whitespace-pre-line">{description}</p>
+            <p class="lang-zh-only whitespace-pre-line">{description_zh || description}</p>
+          </div>
+        )}
         <div class="lang-en-only">
             <RichText content={body} client:visible />
         </div>

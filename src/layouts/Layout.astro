@@ -55,6 +55,17 @@ const finalCanonical = seo?.canonical || globalConfig.seo?.canonical;
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 		<!-- Plyr CSS for styled video players -->
 		<link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+		<style>
+			/* Custom Plyr theme - white accent */
+			:root {
+				--plyr-color-main: #ffffff;
+				--plyr-video-control-color: #ffffff;
+				--plyr-video-control-color-hover: rgba(255, 255, 255, 0.8);
+				--plyr-range-fill-background: #ffffff;
+				--plyr-badge-background: #ffffff;
+				--plyr-badge-text-color: #000000;
+			}
+		</style>
 	</head>
 	<body class="flex flex-col min-h-screen text-foreground bg-background antialiased font-sans">
 		<Header client:load brandName={brandName} brandNameZh={brandNameZh} />

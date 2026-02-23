@@ -8,6 +8,7 @@ images:
   - src: /images/printmaking/%E8%B7%AF%E4%B8%8A%EF%BC%BF4.jpg
   - src: /images/printmaking/%E8%B7%AF%E4%B8%8A%EF%BC%BF1.jpg
   - src: /images/printmaking/%E8%B7%AF%E4%B8%8A%EF%BC%BF3.jpg
+  - src: /images/printmaking/%E8%B7%AF%E4%B8%8A%EF%BC%BF5.jpg
 category: printmaking
 body_zh: ''
 subProjectClassification: 'Project:Blank Film'

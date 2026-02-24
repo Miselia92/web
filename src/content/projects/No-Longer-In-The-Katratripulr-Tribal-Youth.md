@@ -40,7 +40,7 @@ description_zh: |-
   這些在城市中的青年們，身處於社會結構中的什麼位置、如何被觀看？而在當代臺灣，如何去思考什麼是「原民青年」？
 category: photography
 body_zh: ''
-subProjectClassification: Kartratripulr
-subProjectClassification_zh: 卡大地布系列
+subProjectClassification: 'Project:Katratripulr'
+subProjectClassification_zh: 《卡大地布》系列
 ---
 

@@ -8,7 +8,7 @@ images:
   - src: /images/printmaking/Return_2.jpg
   - src: /images/printmaking/Return_3.jpg
   - src: /images/printmaking/Return_4.jpg
-  - {}
+  - src: /images/printmaking/Return_5.jpg
   - {}
   - {}
   - {}

@@ -9,6 +9,7 @@ images:
   - src: '/images/oject:%20The%20Incompletion%20of%20Memory/MONUMENT%20001/%E9%99%B3%E5%AE%87%E5%BC%98%EF%BC%BF%E7%B4%80%E5%BF%B5%E7%A2%91%EF%BC%BF04_1.jpeg'
   - src: '/images/oject:%20The%20Incompletion%20of%20Memory/MONUMENT%20001/%E9%99%B3%E5%AE%87%E5%BC%98%EF%BC%BF%E7%B4%80%E5%BF%B5%E7%A2%91%EF%BC%BF06_1.jpeg'
   - src: '/images/oject:%20The%20Incompletion%20of%20Memory/MONUMENT%20001/%E9%99%B3%E5%AE%87%E5%BC%98%EF%BC%BF%E7%B4%80%E5%BF%B5%E7%A2%91%EF%BC%BF07.jpeg'
+  - youtubeUrl: 'https://youtu.be/6hQCk8YinWc'
 description: |-
   paper, scaffolding, construction dust mesh/675 × 180 × 80 cm
 

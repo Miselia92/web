@@ -14,7 +14,7 @@ images:
   - src: /images/printmaking/Return_8.jpg
   - src: /images/printmaking/Return_9.jpg
   - src: /images/printmaking/Return_10.jpg
-  - {}
+  - src: /images/printmaking/Return_11.jpg
   - {}
   - {}
 category: printmaking

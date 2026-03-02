@@ -11,7 +11,7 @@ images:
   - src: '/images/Project:Blank%20Film/starry%20sky/Starry%20Sky5.jpeg'
   - src: '/images/Project:Blank%20Film/starry%20sky/Starry%20Sky6.jpeg'
   - src: '/images/Project:Blank%20Film/starry%20sky/Starry%20Sky7.jpeg'
-  - {}
+  - src: '/images/Project:Blank%20Film/starry%20sky/Starry%20Sky8.jpeg'
   - {}
   - {}
   - {}

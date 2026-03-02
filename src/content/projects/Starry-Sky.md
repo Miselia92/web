@@ -7,7 +7,7 @@ images:
   - src: '/images/Project:Blank%20Film/starry%20sky/Starry%20Sky1.jpeg'
   - src: '/images/Project:Blank%20Film/starry%20sky/Starry%20Sky2.jpeg'
   - src: '/images/Project:Blank%20Film/starry%20sky/Starry%20Sky3.jpeg'
-  - {}
+  - src: '/images/Project:Blank%20Film/starry%20sky/Starry%20Sky4.jpeg'
   - {}
   - {}
   - {}

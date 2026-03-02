@@ -13,6 +13,10 @@ images:
   - src: /images/printmaking/Return_7.jpg
   - src: /images/printmaking/Return_8.jpg
   - src: /images/printmaking/Return_9.jpg
+  - src: /images/printmaking/Return_10.jpg
+  - {}
+  - {}
+  - {}
 category: printmaking
 body_zh: ''
 subProjectClassification: 'Project:Blank Film'

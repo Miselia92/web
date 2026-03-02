@@ -24,7 +24,7 @@ images:
   - src: /images/Return_18.jpg
   - src: /images/Return_19.jpg
   - src: /images/printmaking/Return_20.jpg
-  - {}
+  - src: /images/printmaking/Return_21.jpg
   - {}
 category: printmaking
 body_zh: ''

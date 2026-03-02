@@ -6,7 +6,7 @@ coverImage: /images/printmaking/Return_8.jpg
 images:
   - src: /images/printmaking/Return_1.jpg
   - src: /images/printmaking/Return_2.jpg
-  - {}
+  - src: /images/printmaking/Return_3.jpg
   - {}
   - {}
   - {}

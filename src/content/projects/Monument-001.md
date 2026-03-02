@@ -6,7 +6,7 @@ coverImage: '/images/oject: The Incompletion of Memory/MONUMENT 001/05211586.jpe
 images:
   - src: '/images/oject:%20The%20Incompletion%20of%20Memory/MONUMENT%20001/05211586.jpeg'
   - src: '/images/oject:%20The%20Incompletion%20of%20Memory/MONUMENT%20001/%E9%99%B3%E5%AE%87%E5%BC%98%EF%BC%BF%E7%B4%80%E5%BF%B5%E7%A2%91%EF%BC%BF01_1.jpeg'
-  - {}
+  - src: '/images/oject:%20The%20Incompletion%20of%20Memory/MONUMENT%20001/%E9%99%B3%E5%AE%87%E5%BC%98%EF%BC%BF%E7%B4%80%E5%BF%B5%E7%A2%91%EF%BC%BF04_1.jpeg'
   - {}
   - {}
 description: |-

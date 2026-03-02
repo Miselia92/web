@@ -26,6 +26,9 @@ images:
   - src: /images/printmaking/Return_20.jpg
   - src: /images/printmaking/Return_21.jpg
   - src: /images/printmaking/Return_22.jpg
+  - src: /images/printmaking/Return_23.jpg
+  - {}
+  - {}
 category: printmaking
 body_zh: ''
 subProjectClassification: 'Project:Blank Film'

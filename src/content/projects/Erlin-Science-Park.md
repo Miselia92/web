@@ -2,7 +2,7 @@
 title: Erlin — Meifang
 title_zh: 二林，梅芳
 year: '2024'
-coverImage: /images/science%20park/%E4%BA%8C%E6%9E%97%E4%B8%AD%E7%A7%91_%E4%B9%9D%E6%8E%9201.JPG
+coverImage: /images/science%20park/%E4%BA%8C%E6%9E%97%E4%B8%AD%E7%A7%91_%E4%B9%9D%E6%8E%9214.JPG
 images:
   - src: /images/science%20park/%E4%BA%8C%E6%9E%97%E4%B8%AD%E7%A7%91_%E4%B9%9D%E6%8E%9201.JPG
   - src: /images/science%20park/%E4%BA%8C%E6%9E%97%E4%B8%AD%E7%A7%91_%E4%B9%9D%E6%8E%9203.JPG

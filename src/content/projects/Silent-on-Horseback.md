@@ -3,6 +3,18 @@ title: Silent on Horseback
 title_zh: 向著平靜的馬背上
 year: '2023'
 coverImage: /images/silent on horeseback/馬匹輔療_三篩01.jpg
+images:
+  - src: /images/silent%20on%20horeseback/%E9%A6%AC%E5%8C%B9%E8%BC%94%E7%99%82_%E4%B8%89%E7%AF%A901.jpeg
+  - {}
+  - {}
+  - {}
+  - {}
+  - {}
+  - {}
+  - {}
+  - {}
+  - {}
+  - {}
 description: |-
   Within certain established social narratives, some children are continually categorized and named. Their restlessness, silence, or absence are read as signs of deviation from order.
   On the way to the riding field, the boy’s state shifts repeatedly—at times agitated, at times absorbed in the glow of his phone, at times gazing out toward a distant horizon. The distance between him and the world seems to waver, as though perpetually losing its center of gravity.

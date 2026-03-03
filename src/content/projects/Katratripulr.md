@@ -17,7 +17,7 @@ images:
   - src: /images/katratripulr/20260226_CYH_%E7%9F%A5%E6%9C%AC%E5%9C%B0%E6%99%AF%E6%B8%AC%E8%A9%A6011.jpeg
   - src: /images/katratripulr/20260226_CYH_%E7%9F%A5%E6%9C%AC%E5%9C%B0%E6%99%AF%E6%B8%AC%E8%A9%A6012.jpeg
   - src: /images/katratripulr/20260226_CYH_%E7%9F%A5%E6%9C%AC%E5%9C%B0%E6%99%AF%E6%B8%AC%E8%A9%A6013.jpeg
-  - {}
+  - src: /images/katratripulr/20260226_CYH_%E7%9F%A5%E6%9C%AC%E5%9C%B0%E6%99%AF%E6%B8%AC%E8%A9%A6014.jpeg
   - {}
 description: (work in progress)
 description_zh: (進行中計畫）

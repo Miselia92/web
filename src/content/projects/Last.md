@@ -8,7 +8,7 @@ images:
   - src: '/images/Project:Blank%20Film/white%20book/Last%20(Kodak%20Proimage100,2021.12)%E9%A0%81%E9%9D%A22.jpeg'
   - src: '/images/Project:Blank%20Film/white%20book/Last%20(Kodak%20Proimage100,2021.12)%E9%A0%81%E9%9D%A23.jpeg'
   - src: '/images/Project:Blank%20Film/white%20book/Last%20(Kodak%20Proimage100,2021.12)%E9%A0%81%E9%9D%A24.jpeg'
-  - {}
+  - src: '/images/Project:Blank%20Film/white%20book/Last%20(Kodak%20Proimage100,2021.12)%E9%A0%81%E9%9D%A25.jpeg'
   - {}
   - {}
 body_zh: ''

@@ -49,7 +49,9 @@ images:
   - src: '/images/No%20Longer%20(In)%20the%20Katratripulr%20Tribal%20Youth/11.%E5%8F%B0%E5%8C%97%E5%B8%82%E4%B8%AD%E5%B1%B1%E5%8D%80%E6%B0%91%E7%94%9F%E6%9D%B1%E8%B7%AF%E4%B8%89%E6%AE%B515%E8%99%9F,2024.jpg'
     description: 'No. 15, Sec. 3, Minsheng E. Rd., Zhongshan Dist., Taipei City 104, Taiwan'
     description_zh: 台北市中山區民生東路三段15號
-  - {}
+  - src: /images/No%20Longer%20(In)%20the%20Katratripulr%20Tribal%20Youth/12.Siningai%20Katatepan.jpg
+    description: 'Siningai Katatepan, Han name: Liao Yuan-Chi'
+    description_zh: 'Siningai Katatepan, 漢名 廖原啟'
   - {}
   - {}
 description: |-

@@ -12,9 +12,7 @@ images:
     description: 《停校日》64.JPEG
   - src: /images/Back-To-School/《停校日》66.JPEG
     description: 《停校日》66.JPEG
-  - youtubeUrl: 'https://www.youtube.com/watch?v=mBw3qzf4s18'
-    description: Never Gonna Give You Up
-description: This is an example project description for Project 1.
+description: ''
 category: photography
 order: 1
 body_zh: ''
@@ -22,4 +20,3 @@ subProjectClassification: 'Project:Goodbye, teachers. Goodbye, classmates. See y
 subProjectClassification_zh: 《老師再見，同學再見，大家明天》系列
 ---
 
-This is a placeholder content for Project 1. It demonstrates how the project detail page looks with the downloaded image.

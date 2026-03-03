@@ -37,8 +37,9 @@ images:
   - src: /images/No%20Longer%20(In)%20the%20Katratripulr%20Tribal%20Youth/15.%E8%87%BA%E6%9D%B1%E7%B8%A3%E5%8D%91%E5%8D%97%E9%84%89%E6%96%99%E5%B1%B1%E8%B7%AF%EF%BC%8C%E9%9D%92%E5%B9%B4%E6%97%8F%E4%BA%BAkaliya%20%20Pagaraugu%20%E6%96%BC%E5%8F%B0%E6%9D%B1%E6%8C%87%E6%8F%AE%E9%83%A8.jpeg
     description: 'Liaoshan Rd., Beinan Township, Taitung County 954, Taiwan'
     description_zh: 臺東縣卑南鄉料山路
-  - src: ''
-    description: ''
+  - src: /images/No%20Longer%20(In)%20the%20Katratripulr%20Tribal%20Youth/16.Kaliya%20Pagaraugu%EF%BC%8C%E6%BC%A2%E5%90%8D%20%E6%9E%97%E9%80%B8%E7%B4%94.jpeg
+    description: 'Kaliya Pagaraugu,Han name: Lin Yi-Chun'
+    description_zh: 'Kaliya Pagaraugu,漢名 林逸純'
   - src: ''
     description: ''
   - src: ''

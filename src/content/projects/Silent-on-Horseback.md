@@ -4,7 +4,7 @@ title_zh: 向著平靜的馬背上
 year: '2023'
 coverImage: /images/silent on horeseback/馬匹輔療_三篩01.jpg
 images:
-  - src: /images/silent%20on%20horeseback/%E9%A6%AC%E5%8C%B9%E8%BC%94%E7%99%82_%E4%B8%89%E7%AF%A901.jpeg
+  - src: /images/silent%20on%20horeseback/%E9%A6%AC%E5%8C%B9%E8%BC%94%E7%99%82_%E4%B8%89%E7%AF%A901.jpg
   - src: /images/silent%20on%20horeseback/%E9%A6%AC%E5%8C%B9%E8%BC%94%E7%99%82_%E4%B8%89%E7%AF%A902.jpg
   - src: /images/silent%20on%20horeseback/%E9%A6%AC%E5%8C%B9%E8%BC%94%E7%99%82_%E4%B8%89%E7%AF%A903.jpg
   - src: /images/silent%20on%20horeseback/%E9%A6%AC%E5%8C%B9%E8%BC%94%E7%99%82_%E4%B8%89%E7%AF%A904.jpg

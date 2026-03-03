@@ -40,8 +40,9 @@ images:
   - src: /images/No%20Longer%20(In)%20the%20Katratripulr%20Tribal%20Youth/16.Kaliya%20Pagaraugu%EF%BC%8C%E6%BC%A2%E5%90%8D%20%E6%9E%97%E9%80%B8%E7%B4%94.jpeg
     description: 'Kaliya Pagaraugu,Han name: Lin Yi-Chun'
     description_zh: 'Kaliya Pagaraugu,漢名 林逸純'
-  - src: ''
-    description: ''
+  - src: /images/No%20Longer%20(In)%20the%20Katratripulr%20Tribal%20Youth/17.%E8%87%BA%E6%9D%B1%E7%B8%A3%E5%8F%B0%E6%9D%B1%E5%B8%82%E5%A4%A7%E5%AD%B8%E8%B7%AF%E4%BA%8C%E6%AE%B5369%E8%99%9F_1.jpeg
+    description: 'No. 369, Sec. 2, Daxue Rd., Taitung City, Taitung County 950, Taiwan'
+    description_zh: 臺東縣台東市大學路二段369號
   - src: ''
     description: ''
 description: |-

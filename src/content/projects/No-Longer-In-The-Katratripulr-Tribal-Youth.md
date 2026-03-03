@@ -39,6 +39,7 @@ description_zh: |-
   卑南族與中「阿累、阿奈」，是同年齡階層的朋友、夥伴；這群年屆 20 歲上下的青年，或因工作、求學而離開了位在台東的卡大地布部落。
   這些在城市中的青年們，身處於社會結構中的什麼位置、如何被觀看？而在當代臺灣，如何去思考什麼是「原民青年」？
 category: photography
+order: 1
 body_zh: ''
 subProjectClassification: 'Project:Katratripulr'
 subProjectClassification_zh: 《卡大地布》系列

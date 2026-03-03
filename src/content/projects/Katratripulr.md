@@ -36,6 +36,7 @@ description_zh: |-
   (進行中計畫）
   此系列以地景的方式凝視卡大地布（知本）地區，關於土地、關於族群、關於國族、關於身份認同、關於信仰、關於經濟民生、關於歷史、關於傳統，關於混雜多元的一個當代部落，是什麼樣子？
 category: photography
+order: 1
 body_zh: ''
 subProjectClassification: 'Project:Katratripulr'
 subProjectClassification_zh: 《卡大地布》系列

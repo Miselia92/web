@@ -43,8 +43,9 @@ images:
   - src: /images/No%20Longer%20(In)%20the%20Katratripulr%20Tribal%20Youth/17.%E8%87%BA%E6%9D%B1%E7%B8%A3%E5%8F%B0%E6%9D%B1%E5%B8%82%E5%A4%A7%E5%AD%B8%E8%B7%AF%E4%BA%8C%E6%AE%B5369%E8%99%9F_1.jpeg
     description: 'No. 369, Sec. 2, Daxue Rd., Taitung City, Taitung County 950, Taiwan'
     description_zh: 臺東縣台東市大學路二段369號
-  - src: ''
-    description: ''
+  - src: /images/No Longer (In) the Katratripulr Tribal Youth/18.Sakura Ruvaniaw，漢名 陳思樺.jpeg
+    description: 'Sakura Ruvaniaw,Han name: Chen Szu-Hua'
+    description_zh: 'Sakura Ruvaniaw, 漢名 陳思樺'
 description: |-
   Among the Pinuyumayan people, “Alay” and “Anay” refer to friends and companions within the same age cohort. This group of young people, around their early twenties, have left the Katratripulr tribe in Taitung due to work or educational pursuits.
   As these youths move into urban settings, what position do they occupy within broader social structures, and how are they perceived and represented? In contemporary Taiwan, how might we critically rethink what it means to be an “Indigenous youth”?

@@ -5,10 +5,10 @@ year: '2024'
 description: |-
   Erlin — a landscape where “possibility” hovers in suspension. Fifteen years after the Central Taiwan Science Park was announced, movement finally seems to begin.
   Farmland, fences, newly paved roads, and emerging factory structures coexist, forming a spatial condition that remains unresolved.
-  These images do not point toward the outcome of development. Instead, they linger in the moment before form solidifies—between acceleration and stagnation. How does a traditional settlement carry the projection of the future while sustaining its existing rhythms of life? How do its residents inhabit this proximity?
+  These images do not point toward the outcome of development. Instead, they linger in the moment before form solidifies—between acceleration and stagnation. How does a traditional settlement carry the projection of the future while sustaining its existing rhythms of life? How do Meifang Village residents inhabit this proximity?
   Those closest to the park are these elderly residents.
   And they are also the farthest from it.
-description_zh: 二林，一片「可能」正在改變的土地，中部科學園區宣布開發後15年，終於好像開始轉動。 農田、圍籬與新鋪道路及新廠房並置存在，構成一種未完成的空間狀態。 這些影像不指向發展的結果，而停留在轉變尚未定型之際——在加速與停滯之間，傳統聚落如何承載未來的想像，同時維持既有的生活結構，居民們又是如何與之共處？ 離園區最近的是這些長輩們，離園區最遠的也是他們。
+description_zh: 二林，一片「可能」正在改變的土地，中部科學園區宣布開發後15年，終於好像開始轉動。 農田、圍籬與新鋪道路及新廠房並置存在，構成一種未完成的空間狀態。 這些影像不指向發展的結果，而停留在轉變尚未定型之際——在加速與停滯之間，傳統聚落如何承載未來的想像，同時維持既有的生活結構，梅芳里居民們又是如何與之共處？ 離園區最近的是這些長輩們，離園區最遠的也是他們。
 body_zh: ''
 ---
 

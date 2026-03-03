@@ -20,7 +20,7 @@ images:
   - src: /images/katratripulr/20260226_CYH_%E7%9F%A5%E6%9C%AC%E5%9C%B0%E6%99%AF%E6%B8%AC%E8%A9%A6014.jpeg
   - src: /images/katratripulr/20260226_CYH_%E7%9F%A5%E6%9C%AC%E5%9C%B0%E6%99%AF%E6%B8%AC%E8%A9%A6015.jpeg
   - src: /images/katratripulr/20260226_CYH_%E7%9F%A5%E6%9C%AC%E5%9C%B0%E6%99%AF%E6%B8%AC%E8%A9%A6016.jpeg
-  - {}
+  - src: /images/katratripulr/20260226_CYH_%E7%9F%A5%E6%9C%AC%E5%9C%B0%E6%99%AF%E6%B8%AC%E8%A9%A6017.jpeg
   - {}
   - {}
 description: (work in progress)

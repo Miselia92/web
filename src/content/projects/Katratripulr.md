@@ -25,8 +25,16 @@ images:
   - src: /images/katratripulr/20260226_CYH_%E7%9F%A5%E6%9C%AC%E5%9C%B0%E6%99%AF%E6%B8%AC%E8%A9%A6019.jpeg
   - src: /images/katratripulr/20260226_CYH_%E7%9F%A5%E6%9C%AC%E5%9C%B0%E6%99%AF%E6%B8%AC%E8%A9%A6020.jpeg
   - src: /images/katratripulr/20260226_CYH_%E7%9F%A5%E6%9C%AC%E5%9C%B0%E6%99%AF%E6%B8%AC%E8%A9%A6021.jpeg
-description: (work in progress)
-description_zh: (進行中計畫）
+description: |-
+  (work in progress)
+  This series approaches Katratripulr (Zhiben) through the language of landscape.
+  It gazes upon the terrain as a site where land, indigeneity, nationhood, identity, belief, livelihood, history, and tradition converge.
+  What does a contemporary Indigenous community look like?
+  one shaped by layered histories, economic realities, inherited rituals, and the ongoing negotiation of belonging?
+  What form does a place take when it holds both continuity and fracture, plurality and entanglement?
+description_zh: |-
+  (進行中計畫）
+  此系列以地景的方式凝視卡大地布（知本）地區，關於土地、關於族群、關於國族、關於身份認同、關於信仰、關於經濟民生、關於歷史、關於傳統，關於混雜多元的一個當代部落，是什麼樣子？
 category: photography
 body_zh: ''
 subProjectClassification: 'Project:Katratripulr'

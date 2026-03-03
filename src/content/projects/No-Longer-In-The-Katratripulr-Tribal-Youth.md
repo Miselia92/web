@@ -8,7 +8,8 @@ images:
     description: 台北市中正區愛國西路1號
     description_zh: 台北市中正區愛國西路1號
   - src: /images/No%20Longer%20(In)%20the%20Katratripulr%20Tribal%20Youth/2.Vunungvunung%20Pagaraugu.jpg
-    description: ''
+    description: 'Vunungvunung Pagaraugu, 漢名 陳毅傑'
+    description_zh: 'Vunungvunung Pagaraugu, Han Chinese name: Chen Yi-Chieh'
   - src: '/images/No%20Longer%20(In)%20the%20Katratripulr%20Tribal%20Youth/3.%E5%8F%B0%E5%8C%97%E5%B8%82%E5%8C%97%E6%8A%95%E5%8D%80%E5%AD%B8%E5%9C%92%E8%B7%AF1%E8%99%9F,2024.jpg'
     description: ''
   - src: /images/No%20Longer%20(In)%20the%20Katratripulr%20Tribal%20Youth/4.Asuku%20Mavaliw.jpg

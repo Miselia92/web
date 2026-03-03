@@ -31,8 +31,9 @@ images:
   - src: '/images/No%20Longer%20(In)%20the%20Katratripulr%20Tribal%20Youth/9.%E6%A1%83%E5%9C%92%E5%B8%82%E4%B8%AD%E5%A3%A2%E5%8D%80%E4%B8%AD%E5%B1%B1%E6%9D%B1%E8%B7%AF%E4%B8%89%E6%AE%B5414%E8%99%9F,2024.jpeg'
     description: 'No. 414, Sec. 3, Zhongshan E. Rd., Zhongli Dist., Taoyuan City 320, Taiwan'
     description_zh: 桃園市中壢區中山東路三段414號
-  - src: ''
-    description: ''
+  - src: /images/No%20Longer%20(In)%20the%20Katratripulr%20Tribal%20Youth/10.Tumusay%20Mavaliu.jpeg
+    description: 'Tumusay Mavaliu,Han name: Chen Yu'
+    description_zh: 'Tumusay Mavaliu,漢名 陳宇'
   - src: ''
     description: ''
   - src: ''

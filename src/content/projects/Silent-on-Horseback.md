@@ -10,7 +10,7 @@ images:
   - src: /images/silent%20on%20horeseback/%E9%A6%AC%E5%8C%B9%E8%BC%94%E7%99%82_%E4%B8%89%E7%AF%A904.jpg
   - src: /images/silent%20on%20horeseback/%E9%A6%AC%E5%8C%B9%E8%BC%94%E7%99%82_%E4%B8%89%E7%AF%A905.jpg
   - src: /images/silent%20on%20horeseback/%E9%A6%AC%E5%8C%B9%E8%BC%94%E7%99%82_%E4%B8%89%E7%AF%A906.jpg
-  - {}
+  - src: /images/silent%20on%20horeseback/%E9%A6%AC%E5%8C%B9%E8%BC%94%E7%99%82_%E4%B8%89%E7%AF%A907.jpg
   - {}
   - {}
   - {}

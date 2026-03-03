@@ -13,7 +13,7 @@ images:
   - src: /images/silent%20on%20horeseback/%E9%A6%AC%E5%8C%B9%E8%BC%94%E7%99%82_%E4%B8%89%E7%AF%A907.jpg
   - src: /images/silent%20on%20horeseback/%E9%A6%AC%E5%8C%B9%E8%BC%94%E7%99%82_%E4%B8%89%E7%AF%A908.jpg
   - src: /images/silent%20on%20horeseback/%E9%A6%AC%E5%8C%B9%E8%BC%94%E7%99%82_%E4%B8%89%E7%AF%A909.jpg
-  - {}
+  - src: /images/silent%20on%20horeseback/%E9%A6%AC%E5%8C%B9%E8%BC%94%E7%99%82_%E4%B8%89%E7%AF%A910.jpg
   - {}
 description: |-
   Within certain established social narratives, some children are continually categorized and named. Their restlessness, silence, or absence are read as signs of deviation from order.

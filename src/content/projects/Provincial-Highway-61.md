@@ -5,7 +5,7 @@ year: 2025-Now
 coverImage: /images/provincial%2061/20260226_CYH_%E5%85%AC%E8%B7%AF%E8%A8%88%E7%95%AB%E6%B8%AC%E8%A9%A6008.jpeg
 images:
   - src: /images/provincial%2061/20260226_CYH_%E5%85%AC%E8%B7%AF%E8%A8%88%E7%95%AB%E6%B8%AC%E8%A9%A6001.jpeg
-  - {}
+  - src: /images/provincial%2061/20260226_CYH_%E5%85%AC%E8%B7%AF%E8%A8%88%E7%95%AB%E6%B8%AC%E8%A9%A6002.jpeg
   - {}
   - {}
   - {}

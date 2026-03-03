@@ -9,6 +9,7 @@ description: |-
   Those closest to the park are these elderly residents.
   And they are also the farthest from it.
 description_zh: 二林，一片「可能」正在改變的土地，中部科學園區宣布開發後15年，終於好像開始轉動。 農田、圍籬與新鋪道路及新廠房並置存在，構成一種未完成的空間狀態。 這些影像不指向發展的結果，而停留在轉變尚未定型之際——在加速與停滯之間，傳統聚落如何承載未來的想像，同時維持既有的生活結構，梅芳里居民們又是如何與之共處？ 離園區最近的是這些長輩們，離園區最遠的也是他們。
+category: photography
 body_zh: ''
 ---
 

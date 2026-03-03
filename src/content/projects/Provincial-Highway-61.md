@@ -15,7 +15,7 @@ images:
   - src: /images/provincial%2061/20260226_CYH_%E5%85%AC%E8%B7%AF%E8%A8%88%E7%95%AB%E6%B8%AC%E8%A9%A6009.jpeg
   - src: /images/provincial%2061/20260226_CYH_%E5%85%AC%E8%B7%AF%E8%A8%88%E7%95%AB%E6%B8%AC%E8%A9%A6010.jpeg
   - src: /images/provincial%2061/20260226_CYH_%E5%85%AC%E8%B7%AF%E8%A8%88%E7%95%AB%E6%B8%AC%E8%A9%A6011.jpeg
-  - {}
+  - src: /images/provincial%2061/20260226_CYH_%E5%85%AC%E8%B7%AF%E8%A8%88%E7%95%AB%E6%B8%AC%E8%A9%A6012.jpeg
   - {}
   - {}
   - {}

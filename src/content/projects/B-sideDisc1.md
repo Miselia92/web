@@ -2,6 +2,19 @@
 title: 'B-side:Disc1'
 title_zh: 'B-side:Disc1'
 year: '2025'
+coverImage: /images/B side/B side展場紀錄2.JPG
+images:
+  - src: /images/B%20side/%E5%A4%8F%E6%97%A5%E6%90%96%E6%90%96%E6%9D%AF001.jpeg
+  - {}
+  - {}
+  - {}
+  - {}
+  - {}
+  - {}
+  - {}
+  - {}
+  - {}
+  - {}
 description: |-
   CD case, lyric book
 
@@ -11,6 +24,7 @@ description_zh: |-
   唱片盒、CD歌詞本
 
   在拍作品的路上，我都會帶著一台隨身機隨手捕捉，這些不在主要作品系列中、從未被視為作品的影像們，有些我其實不知道為什麼非常喜歡，它們就像是唱片中的B side，不是主打歌，但有時候反而更充滿獨特的魅力。
+category: photography
 body_zh: ''
 ---
 

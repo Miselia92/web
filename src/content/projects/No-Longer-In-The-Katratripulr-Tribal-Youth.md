@@ -52,10 +52,12 @@ images:
   - src: /images/No%20Longer%20(In)%20the%20Katratripulr%20Tribal%20Youth/12.Siningai%20Katatepan.jpg
     description: 'Siningai Katatepan, Han name: Liao Yuan-Chi'
     description_zh: 'Siningai Katatepan, 漢名 廖原啟'
+  - src: '/images/No%20Longer%20(In)%20the%20Katratripulr%20Tribal%20Youth/13.%E9%AB%98%E9%9B%84%E5%B8%82%E5%A4%A7%E6%A8%B9%E5%8D%80%E5%AD%B8%E5%9F%8E%E8%B7%AF%E4%B8%80%E6%AE%B51%E8%99%9F,2024.jpeg'
+    description: 'No. 1, Sec. 1, Xuecheng Rd., Dashu Dist., Kaohsiung City 840, Taiwan'
+    description_zh: 高雄市大樹區學城路一段1號
   - src: /images/No%20Longer%20(In)%20the%20Katratripulr%20Tribal%20Youth/14.Louzb%20Mavaliw.jpeg
     description: 'Louzb Mavaliw, Han name: Lo Hao-Chen'
     description_zh: 'Louzb Mavaliw, 漢名 羅皓辰'
-  - {}
 description: |-
   Among the Pinuyumayan people, “Alay” and “Anay” refer to friends and companions within the same age cohort. This group of young people, around their early twenties, have left the Katratripulr tribe in Taitung due to work or educational pursuits.
   As these youths move into urban settings, what position do they occupy within broader social structures, and how are they perceived and represented? In contemporary Taiwan, how might we critically rethink what it means to be an “Indigenous youth”?

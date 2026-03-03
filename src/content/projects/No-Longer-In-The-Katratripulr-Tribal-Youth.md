@@ -52,7 +52,9 @@ images:
   - src: /images/No%20Longer%20(In)%20the%20Katratripulr%20Tribal%20Youth/12.Siningai%20Katatepan.jpg
     description: 'Siningai Katatepan, Han name: Liao Yuan-Chi'
     description_zh: 'Siningai Katatepan, 漢名 廖原啟'
-  - {}
+  - src: /images/No%20Longer%20(In)%20the%20Katratripulr%20Tribal%20Youth/14.Louzb%20Mavaliw.jpeg
+    description: 'Louzb Mavaliw, Han name: Lo Hao-Chen'
+    description_zh: 'Louzb Mavaliw, 漢名 羅皓辰'
   - {}
 description: |-
   Among the Pinuyumayan people, “Alay” and “Anay” refer to friends and companions within the same age cohort. This group of young people, around their early twenties, have left the Katratripulr tribe in Taitung due to work or educational pursuits.

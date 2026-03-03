@@ -22,8 +22,9 @@ images:
   - src: /images/No%20Longer%20(In)%20the%20Katratripulr%20Tribal%20Youth/6.Masese%20Pagaraugu.jpg
     description: 'Masese Pagaraugu, Han name: Pan Chun-En'
     description_zh: 'Masese Pagaraugu,漢名 潘群恩'
-  - src: ''
-    description: ''
+  - src: /images/No%20Longer%20(In)%20the%20Katratripulr%20Tribal%20Youth/7.%E5%8F%B0%E4%B8%AD%E5%B8%82%E6%B8%85%E6%B0%B4%E5%8D%80%E5%8C%97%E4%B8%80%E8%B7%AF%20%E5%8C%97%E7%AA%81%E6%8F%90%E7%AE%A1%E5%88%B6%E7%AB%99.jpeg
+    description: 'North Jetty Control Station, Beiyi 1st Rd., Qingshui Dist., Taichung City 436, Taiwan'
+    description_zh: 台中市清水區北一路 北突提管制站
   - src: ''
     description: ''
   - src: ''

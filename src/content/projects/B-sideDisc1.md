@@ -13,7 +13,7 @@ images:
   - src: /images/B%20side/%E5%A4%8F%E6%97%A5%E6%90%96%E6%90%96%E6%9D%AF013.jpeg
   - src: /images/B%20side/%E5%A4%8F%E6%97%A5%E6%90%96%E6%90%96%E6%9D%AF017.jpeg
   - src: /images/B%20side/%E5%A4%8F%E6%97%A5%E6%90%96%E6%90%96%E6%9D%AF024.jpeg
-  - {}
+  - src: /images/B%20side/%E5%A4%8F%E6%97%A5%E6%90%96%E6%90%96%E6%9D%AF025.jpeg
   - {}
 description: |-
   CD case, lyric book

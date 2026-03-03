@@ -21,7 +21,7 @@ images:
   - src: /images/printmaking/Return_15.jpg
   - src: /images/printmaking/Return_16.jpg
   - src: /images/printmaking/Return_17.jpg
-  - src: /images/Return_18.jpg
+  - src: /images/printmaking/Return_18.jpg
   - src: /images/Return_19.jpg
   - src: /images/printmaking/Return_20.jpg
   - src: /images/printmaking/Return_21.jpg

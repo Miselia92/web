@@ -4,14 +4,32 @@ title_zh: 停校日
 year: 2021-Now
 coverImage: /images/Back-To-School/%E5%81%9C%E6%A0%A1%E6%97%A5%20%E7%B3%BB%E5%88%97%EF%BC%BF%E4%B8%80%E8%8F%85%E5%B1%95%E8%A6%BD006.jpeg
 images:
-  - src: /images/Back-To-School/《停校日》58.JPEG
-    description: 《停校日》58.JPEG
-  - src: /images/Back-To-School/《停校日》52.jpeg
-    description: 《停校日》52.jpeg
-  - src: /images/Back-To-School/《停校日》64.JPEG
-    description: 《停校日》64.JPEG
-  - src: /images/Back-To-School/《停校日》66.JPEG
-    description: 《停校日》66.JPEG
+  - src: /images/Back-To-School/20260226_CYH_%E5%81%9C%E6%A0%A1%E6%97%A5%E7%B6%B2%E9%A0%81%E6%B8%AC%E8%A9%A6001.jpeg
+  - {}
+  - {}
+  - {}
+  - {}
+  - {}
+  - {}
+  - {}
+  - {}
+  - {}
+  - {}
+  - {}
+  - {}
+  - {}
+  - {}
+  - {}
+  - {}
+  - {}
+  - {}
+  - {}
+  - {}
+  - {}
+  - {}
+  - {}
+  - {}
+  - {}
 description: |-
   (work in progress)
   As declining birth rates continue, the number of schools closing each year steadily increases. Yet this social transformation remains largely peripheral to public attention.

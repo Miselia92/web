@@ -23,6 +23,8 @@ images:
   - src: /images/katratripulr/20260226_CYH_%E7%9F%A5%E6%9C%AC%E5%9C%B0%E6%99%AF%E6%B8%AC%E8%A9%A6017.jpeg
   - src: /images/katratripulr/20260226_CYH_%E7%9F%A5%E6%9C%AC%E5%9C%B0%E6%99%AF%E6%B8%AC%E8%A9%A6018.jpeg
   - src: /images/katratripulr/20260226_CYH_%E7%9F%A5%E6%9C%AC%E5%9C%B0%E6%99%AF%E6%B8%AC%E8%A9%A6019.jpeg
+  - src: /images/katratripulr/20260226_CYH_%E7%9F%A5%E6%9C%AC%E5%9C%B0%E6%99%AF%E6%B8%AC%E8%A9%A6020.jpeg
+  - {}
 description: (work in progress)
 description_zh: (進行中計畫）
 category: photography

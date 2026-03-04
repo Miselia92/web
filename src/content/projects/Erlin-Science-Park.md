@@ -2,24 +2,7 @@
 title: Erlin — Meifang
 title_zh: 二林，梅芳
 year: '2023'
-coverImage: /images/science%20park/%E4%BA%8C%E6%9E%97%E4%B8%AD%E7%A7%91_%E4%B9%9D%E6%8E%9214.JPG
-images:
-  - src: /images/science%20park/%E4%BA%8C%E6%9E%97%E4%B8%AD%E7%A7%91_%E4%B9%9D%E6%8E%9201.JPG
-  - src: /images/science%20park/%E4%BA%8C%E6%9E%97%E4%B8%AD%E7%A7%91_%E4%B9%9D%E6%8E%9203.JPG
-  - src: /images/science%20park/%E4%BA%8C%E6%9E%97%E4%B8%AD%E7%A7%91_%E4%B9%9D%E6%8E%9206.JPG
-  - src: /images/science%20park/%E4%BA%8C%E6%9E%97%E4%B8%AD%E7%A7%91_%E4%B9%9D%E6%8E%9207.JPG
-  - src: /images/science%20park/%E4%BA%8C%E6%9E%97%E4%B8%AD%E7%A7%91_%E4%B9%9D%E6%8E%9208.JPG
-  - src: /images/science%20park/%E4%BA%8C%E6%9E%97%E4%B8%AD%E7%A7%91_%E4%B9%9D%E6%8E%9209.JPG
-  - src: /images/science%20park/%E4%BA%8C%E6%9E%97%E4%B8%AD%E7%A7%91_%E4%B9%9D%E6%8E%9210.JPG
-  - src: /images/science%20park/%E4%BA%8C%E6%9E%97%E4%B8%AD%E7%A7%91_%E4%B9%9D%E6%8E%9211.JPG
-  - src: /images/science%20park/%E4%BA%8C%E6%9E%97%E4%B8%AD%E7%A7%91_%E4%B9%9D%E6%8E%9213.JPG
-  - src: /images/science%20park/%E4%BA%8C%E6%9E%97%E4%B8%AD%E7%A7%91_%E4%B9%9D%E6%8E%9214.JPG
-  - src: /images/science%20park/%E4%BA%8C%E6%9E%97%E4%B8%AD%E7%A7%91_%E4%B9%9D%E6%8E%9216.JPG
-  - src: /images/science%20park/%E4%BA%8C%E6%9E%97%E4%B8%AD%E7%A7%91_%E4%B9%9D%E6%8E%9217.JPG
-  - src: /images/science%20park/%E4%BA%8C%E6%9E%97%E4%B8%AD%E7%A7%91_%E4%B9%9D%E6%8E%9218.JPG
-  - src: /images/science%20park/%E4%BA%8C%E6%9E%97%E4%B8%AD%E7%A7%91_%E4%B9%9D%E6%8E%9219.JPG
-  - src: /images/science%20park/%E4%BA%8C%E6%9E%97%E4%B8%AD%E7%A7%91_%E4%B9%9D%E6%8E%9220.JPG
-  - src: /images/science%20park/%E4%BA%8C%E6%9E%97%E4%B8%AD%E7%A7%91_%E4%B9%9D%E6%8E%9222.JPG
+coverImage: ''
 description: |-
   Erlin — a landscape where “possibility” hovers in suspension. Fifteen years after the Central Taiwan Science Park was announced, movement finally seems to begin.
   Farmland, fences, newly paved roads, and emerging factory structures coexist, forming a spatial condition that remains unresolved.

@@ -2,7 +2,18 @@
 title: Erlin — Meifang
 title_zh: 二林，梅芳
 year: '2023'
-coverImage: ''
+coverImage: /images/erlin/二林中科_九排14.jpeg
+images:
+  - src: /images/erlin/%E4%BA%8C%E6%9E%97%E4%B8%AD%E7%A7%91_%E4%B9%9D%E6%8E%9201.jpeg
+  - {}
+  - {}
+  - {}
+  - {}
+  - {}
+  - {}
+  - {}
+  - {}
+  - {}
 description: |-
   Erlin — a landscape where “possibility” hovers in suspension. Fifteen years after the Central Taiwan Science Park was announced, movement finally seems to begin.
   Farmland, fences, newly paved roads, and emerging factory structures coexist, forming a spatial condition that remains unresolved.

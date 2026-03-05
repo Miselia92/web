@@ -13,7 +13,7 @@ images:
   - src: /images/erlin/%E4%BA%8C%E6%9E%97%E4%B8%AD%E7%A7%91_%E4%B9%9D%E6%8E%9210.jpeg
   - src: /images/erlin/%E4%BA%8C%E6%9E%97%E4%B8%AD%E7%A7%91_%E4%B9%9D%E6%8E%9211.jpeg
   - src: /images/erlin/%E4%BA%8C%E6%9E%97%E4%B8%AD%E7%A7%91_%E4%B9%9D%E6%8E%9213.jpeg
-  - {}
+  - src: /images/erlin/%E4%BA%8C%E6%9E%97%E4%B8%AD%E7%A7%91_%E4%B9%9D%E6%8E%9214.jpeg
 description: |-
   Erlin — a landscape where “possibility” hovers in suspension. Fifteen years after the Central Taiwan Science Park was announced, movement finally seems to begin.
   Farmland, fences, newly paved roads, and emerging factory structures coexist, forming a spatial condition that remains unresolved.

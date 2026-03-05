@@ -6,7 +6,7 @@ coverImage: /images/erlin/二林中科_九排14.jpeg
 images:
   - src: /images/erlin/%E4%BA%8C%E6%9E%97%E4%B8%AD%E7%A7%91_%E4%B9%9D%E6%8E%9201.jpeg
   - src: /images/erlin/%E4%BA%8C%E6%9E%97%E4%B8%AD%E7%A7%91_%E4%B9%9D%E6%8E%9203.jpeg
-  - {}
+  - src: /images/erlin/%E4%BA%8C%E6%9E%97%E4%B8%AD%E7%A7%91_%E4%B9%9D%E6%8E%9206.jpeg
   - {}
   - {}
   - {}
